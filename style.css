@@ -838,6 +838,16 @@ input[type="tel"] {
     font-weight: 600;
     font-size: 1rem;
     flex-shrink: 0;
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.testimonial-card .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .testimonial-card .author-name {
