@@ -16,13 +16,22 @@
 
 <!-- ========== HERO — FULLSCREEN OVERLAY ========== -->
 <section class="hero-full">
-    <div class="hero-full-bg">
-        <img src="assets/images/hero-home2.jpg" alt="Premium vehicle insurance service — professional with luxury car at sunset" loading="eager">
+    <!-- Auto-moving Hero Background Slider -->
+    <div class="hero-slider" id="hero-slider">
+        <div class="hero-slide active">
+            <img src="assets/images/hero-home2.jpg" alt="Premium vehicle insurance service — professional with luxury car at sunset" loading="eager">
+        </div>
+        <div class="hero-slide">
+            <img src="assets/images/hero-slide-2.jpg" alt="Smooth highway driving with comprehensive motor insurance" loading="lazy">
+        </div>
+        <div class="hero-slide">
+            <img src="assets/images/hero-slide-3.jpg" alt="Ultra-modern automotive documentation & inspection center pavilion" loading="lazy">
+        </div>
     </div>
     <div class="hero-full-overlay"></div>
     <div class="hero-full-content animate-on-scroll">
         <!-- Animated badge -->
-        <div style="display:inline-flex;align-items:center;gap:0.625rem;background:rgba(30,79,216,0.25);border:1px solid rgba(30,79,216,0.4);backdrop-filter:blur(12px);border-radius:var(--radius-full);padding:0.5rem 1.25rem;margin-bottom:1.25rem;">
+        <div style="display:inline-flex;align-items:center;gap:0.625rem;background:rgba(217, 119, 6,0.25);border:1px solid rgba(217, 119, 6,0.4);backdrop-filter:blur(12px);border-radius:var(--radius-full);padding:0.5rem 1.25rem;margin-bottom:1.25rem;">
             <span style="width:0.5rem;height:0.5rem;border-radius:50%;background:#10B981;display:inline-block;animation:pulse-glow 2s ease-in-out infinite;"></span>
             <span style="color:rgba(255,255,255,0.9);font-family:var(--font-heading);font-weight:600;font-size:0.8125rem;letter-spacing:0.06em;">INDIA'S TRUSTED VEHICLE DOCUMENTATION SERVICE</span>
         </div>
@@ -36,54 +45,240 @@
             <a href="contact.html" class="btn btn-primary btn-lg">
                 <i class="fas fa-calendar-check"></i> Book Appointment
             </a>
-            <a href="services.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.35);color:#fff;">
+            <a href="services.html" class="btn btn-outline-light btn-lg">
                 <i class="fas fa-play-circle"></i> Explore Services
             </a>
         </div>
         <!-- Inline stats row -->
         <div style="display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;">
             <div style="text-align:center;">
-                <div style="font-family:var(--font-heading);font-weight:700;font-size:1.875rem;color:#fff;" data-count="12000" data-suffix="+">12000+</div>
+                <div style="font-family:var(--font-heading);font-weight:600;font-size:1.875rem;color:#fff;" data-count="12000" data-suffix="+">12000+</div>
                 <div style="font-size:0.8125rem;color:rgba(255,255,255,0.55);font-weight:500;">Vehicles Served</div>
             </div>
             <div style="width:1px;background:rgba(255,255,255,0.15);align-self:stretch;"></div>
             <div style="text-align:center;">
-                <div style="font-family:var(--font-heading);font-weight:700;font-size:1.875rem;color:#fff;" data-count="48" data-suffix="hr">48hr</div>
+                <div style="font-family:var(--font-heading);font-weight:600;font-size:1.875rem;color:#fff;" data-count="48" data-suffix="hr">48hr</div>
                 <div style="font-size:0.8125rem;color:rgba(255,255,255,0.55);font-weight:500;">Avg. Processing</div>
             </div>
             <div style="width:1px;background:rgba(255,255,255,0.15);align-self:stretch;"></div>
             <div style="text-align:center;">
-                <div style="font-family:var(--font-heading);font-weight:700;font-size:1.875rem;color:#fff;">4.9<span style="font-size:1rem;color:rgba(255,255,255,0.55);">/5</span></div>
+                <div style="font-family:var(--font-heading);font-weight:600;font-size:1.875rem;color:#fff;">4.9<span style="font-size:1rem;color:rgba(255,255,255,0.55);">/5</span></div>
                 <div style="font-size:0.8125rem;color:rgba(255,255,255,0.55);font-weight:500;">Client Rating</div>
             </div>
         </div>
+
+        <!-- Slide Indicator Dots -->
+        <div style="margin-top:2rem;display:flex;justify-content:center;">
+            <div class="hero-slider-dots" id="hero-dots">
+                <button class="hero-dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+                <button class="hero-dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+                <button class="hero-dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+            </div>
+        </div>
     </div>
+
+    <!-- Slider Navigation Arrow Buttons -->
+    <button class="hero-slider-nav hero-slider-prev" onclick="prevHeroSlide()" aria-label="Previous Slide">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="hero-slider-nav hero-slider-next" onclick="nextHeroSlideManual()" aria-label="Next Slide">
+        <i class="fas fa-chevron-right"></i>
+    </button>
 </section>
 
 <!-- ========== MARQUEE TRUST STRIP ========== -->
 <section class="section-sm" style="border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">
     <div class="container" style="margin-bottom:1rem;">
-        <p style="text-align:center;font-family:var(--font-heading);font-weight:600;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:1.5rem;">Accepted by All Major Insurance Companies</p>
+        <p style="text-align:center;font-family:var(--font-heading);font-weight:500;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:1.5rem;">Accepted by All Major Insurance Companies</p>
     </div>
     <div class="marquee-wrapper">
         <div class="marquee-track">
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> New India Assurance</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> HDFC ERGO</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> Bajaj Allianz</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> ICICI Lombard</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> United India</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> Oriental Insurance</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> Reliance General</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> National Insurance</div>
-            <!-- Duplicates for seamless loop -->
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> New India Assurance</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> HDFC ERGO</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> Bajaj Allianz</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> ICICI Lombard</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> United India</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> Oriental Insurance</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> Reliance General</div>
-            <div class="marquee-item"><i class="fas fa-shield-alt"></i> National Insurance</div>
+            <!-- HDFC ERGO -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#004C8F"/>
+                    <rect x="3" y="3" width="26" height="26" rx="4" fill="#DA251D"/>
+                    <rect x="9" y="9" width="14" height="14" fill="#FFFFFF"/>
+                    <rect x="12" y="6" width="8" height="20" fill="#DA251D"/>
+                    <rect x="6" y="12" width="20" height="8" fill="#DA251D"/>
+                </svg>
+                <span>HDFC ERGO</span>
+            </div>
+            <!-- Bajaj Allianz -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#005DAA"/>
+                    <path d="M9 16C9 12.134 12.134 9 16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23C12.134 23 9 19.866 9 16Z" stroke="#FFFFFF" stroke-width="2.2"/>
+                    <path d="M12.5 16L15 18.5L19.5 13.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Bajaj Allianz</span>
+            </div>
+            <!-- ICICI Lombard -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#881B24"/>
+                    <circle cx="16" cy="16" r="9.5" fill="#F37021"/>
+                    <circle cx="16" cy="11.5" r="2.2" fill="#FFFFFF"/>
+                    <path d="M14.2 15.5H17.8V21.5H14.2V15.5Z" fill="#FFFFFF"/>
+                </svg>
+                <span>ICICI Lombard</span>
+            </div>
+            <!-- Tata AIG -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#004380"/>
+                    <path d="M9 10C9 10 14 9.5 15.5 13.5V23H16.5V13.5C18 9.5 23 10 23 10C23 10 18.5 11 16.5 16.5C14.5 11 9 10 9 10Z" fill="#FFFFFF"/>
+                </svg>
+                <span>Tata AIG</span>
+            </div>
+            <!-- Go Digit -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#FFCB05"/>
+                    <circle cx="12" cy="12.5" r="2.2" fill="#18181B"/>
+                    <circle cx="20" cy="12.5" r="2.2" fill="#18181B"/>
+                    <path d="M10.5 17.5C11.8 21.5 20.2 21.5 21.5 17.5" stroke="#18181B" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span>Digit Insurance</span>
+            </div>
+            <!-- SBI General -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#1C2E63"/>
+                    <circle cx="16" cy="16" r="10" fill="#00A5EC"/>
+                    <circle cx="16" cy="14" r="3.5" fill="#1C2E63"/>
+                    <rect x="14.5" y="14" width="3" height="7.5" fill="#1C2E63"/>
+                </svg>
+                <span>SBI General</span>
+            </div>
+            <!-- New India Assurance -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#0A2240"/>
+                    <circle cx="16" cy="16" r="10" stroke="#F5A623" stroke-width="2"/>
+                    <circle cx="16" cy="16" r="6" fill="#F5A623"/>
+                    <path d="M16 8V12M16 20V24M8 16H12M20 16H24M10.5 10.5L13.5 13.5M18.5 18.5L21.5 21.5M21.5 10.5L18.5 13.5M13.5 18.5L10.5 21.5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>New India Assurance</span>
+            </div>
+            <!-- Reliance General -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#0C2340"/>
+                    <rect x="5" y="5" width="22" height="22" rx="3" fill="#D32F2F"/>
+                    <path d="M16 8L22 19H10L16 8Z" fill="#0C2340"/>
+                    <circle cx="16" cy="15" r="3" fill="#FFFFFF"/>
+                </svg>
+                <span>Reliance General</span>
+            </div>
+            <!-- National Insurance -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#0B5D34"/>
+                    <circle cx="16" cy="16" r="10" stroke="#E5A910" stroke-width="2"/>
+                    <circle cx="16" cy="16" r="4.5" fill="#E5A910"/>
+                    <path d="M16 9V23M9 16H23" stroke="#E5A910" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>National Insurance</span>
+            </div>
+            <!-- ACKO Insurance -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#6320EE"/>
+                    <path d="M16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23C18.2 23 20.15 21.98 21.4 20.4L18.8 18.2C18.15 19 17.15 19.5 16 19.5C14.07 19.5 12.5 17.93 12.5 16C12.5 14.07 14.07 12.5 16 12.5C17.15 12.5 18.15 13 18.8 13.8L21.4 11.6C20.15 10.02 18.2 9 16 9Z" fill="#FFFFFF"/>
+                    <circle cx="21" cy="21" r="2" fill="#FFFFFF"/>
+                </svg>
+                <span>ACKO Insurance</span>
+            </div>
+
+            <!-- Seamless Duplicate Loop -->
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#004C8F"/>
+                    <rect x="3" y="3" width="26" height="26" rx="4" fill="#DA251D"/>
+                    <rect x="9" y="9" width="14" height="14" fill="#FFFFFF"/>
+                    <rect x="12" y="6" width="8" height="20" fill="#DA251D"/>
+                    <rect x="6" y="12" width="20" height="8" fill="#DA251D"/>
+                </svg>
+                <span>HDFC ERGO</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#005DAA"/>
+                    <path d="M9 16C9 12.134 12.134 9 16 9C19.866 9 23 12.134 23 16C23 19.866 19.866 23 16 23C12.134 23 9 19.866 9 16Z" stroke="#FFFFFF" stroke-width="2.2"/>
+                    <path d="M12.5 16L15 18.5L19.5 13.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Bajaj Allianz</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#881B24"/>
+                    <circle cx="16" cy="16" r="9.5" fill="#F37021"/>
+                    <circle cx="16" cy="11.5" r="2.2" fill="#FFFFFF"/>
+                    <path d="M14.2 15.5H17.8V21.5H14.2V15.5Z" fill="#FFFFFF"/>
+                </svg>
+                <span>ICICI Lombard</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#004380"/>
+                    <path d="M9 10C9 10 14 9.5 15.5 13.5V23H16.5V13.5C18 9.5 23 10 23 10C23 10 18.5 11 16.5 16.5C14.5 11 9 10 9 10Z" fill="#FFFFFF"/>
+                </svg>
+                <span>Tata AIG</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#FFCB05"/>
+                    <circle cx="12" cy="12.5" r="2.2" fill="#18181B"/>
+                    <circle cx="20" cy="12.5" r="2.2" fill="#18181B"/>
+                    <path d="M10.5 17.5C11.8 21.5 20.2 21.5 21.5 17.5" stroke="#18181B" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span>Digit Insurance</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#1C2E63"/>
+                    <circle cx="16" cy="16" r="10" fill="#00A5EC"/>
+                    <circle cx="16" cy="14" r="3.5" fill="#1C2E63"/>
+                    <rect x="14.5" y="14" width="3" height="7.5" fill="#1C2E63"/>
+                </svg>
+                <span>SBI General</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#0A2240"/>
+                    <circle cx="16" cy="16" r="10" stroke="#F5A623" stroke-width="2"/>
+                    <circle cx="16" cy="16" r="6" fill="#F5A623"/>
+                    <path d="M16 8V12M16 20V24M8 16H12M20 16H24M10.5 10.5L13.5 13.5M18.5 18.5L21.5 21.5M21.5 10.5L18.5 13.5M13.5 18.5L10.5 21.5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>New India Assurance</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#0C2340"/>
+                    <rect x="5" y="5" width="22" height="22" rx="3" fill="#D32F2F"/>
+                    <path d="M16 8L22 19H10L16 8Z" fill="#0C2340"/>
+                    <circle cx="16" cy="15" r="3" fill="#FFFFFF"/>
+                </svg>
+                <span>Reliance General</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#0B5D34"/>
+                    <circle cx="16" cy="16" r="10" stroke="#E5A910" stroke-width="2"/>
+                    <circle cx="16" cy="16" r="4.5" fill="#E5A910"/>
+                    <path d="M16 9V23M9 16H23" stroke="#E5A910" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>National Insurance</span>
+            </div>
+            <div class="marquee-item">
+                <svg class="partner-logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="6" fill="#6320EE"/>
+                    <path d="M16 9C12.134 9 9 12.134 9 16C9 19.866 12.134 23 16 23C18.2 23 20.15 21.98 21.4 20.4L18.8 18.2C18.15 19 17.15 19.5 16 19.5C14.07 19.5 12.5 17.93 12.5 16C12.5 14.07 14.07 12.5 16 12.5C17.15 12.5 18.15 13 18.8 13.8L21.4 11.6C20.15 10.02 18.2 9 16 9Z" fill="#FFFFFF"/>
+                    <circle cx="21" cy="21" r="2" fill="#FFFFFF"/>
+                </svg>
+                <span>ACKO Insurance</span>
+            </div>
         </div>
     </div>
 </section>
@@ -98,55 +293,88 @@
         </div>
         <div class="bento-grid animate-on-scroll">
             <!-- Large feature cell -->
-            <div class="bento-cell bento-cell-1" style="padding:2.5rem;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(160deg,var(--secondary) 0%,#1A2D5A 100%);position:relative;overflow:hidden;">
-                <div style="position:absolute;top:-20%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(30,79,216,0.35) 0%,transparent 70%);border-radius:50%;"></div>
-                <div style="position:relative;z-index:1;">
-                    <div style="width:3.5rem;height:3.5rem;border-radius:var(--radius-xl);background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;margin-bottom:1.5rem;border:1px solid rgba(255,255,255,0.15);">
-                        <i class="fas fa-file-shield"></i>
+            <div class="bento-cell bento-cell-1">
+                <div class="bento-cell-1-glow"></div>
+                <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:1.75rem;">
+                    <!-- Top: Hero Grid (Insurance Info + Key Plan Benefits) -->
+                    <div class="bento-hero-grid">
+                        <!-- Left: Content & CTA -->
+                        <div>
+                            <div class="bento-cell-icon">
+                                <i class="fas fa-file-shield"></i>
+                            </div>
+                            <h3 style="margin-bottom:0.75rem;font-size:1.65rem;">Motor Insurance Renewal</h3>
+                            <p style="line-height:1.7;margin-bottom:1.5rem;font-size:0.9375rem;">Renew your two-wheeler or four-wheeler insurance without paperwork hassles. Compare plans from 20+ top insurers and get the highest NCB discounts.</p>
+                            <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+                                <a href="services.html#insurance" class="btn btn-primary">Get Insurance <i class="fas fa-arrow-right"></i></a>
+                                <span style="font-size:0.8125rem;display:inline-flex;align-items:center;gap:0.375rem;font-weight:500;color:var(--text-muted);">
+                                    <i class="fas fa-bolt" style="color:var(--primary);"></i> In 5 Minutes
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Right: Key Plan Highlights Widget -->
+                        <div class="bento-benefits-card">
+                            <div class="bento-benefits-header">
+                                <span style="font-family:var(--font-heading);font-weight:700;font-size:0.875rem;display:flex;align-items:center;gap:0.5rem;color:var(--text-heading);">
+                                    <i class="fas fa-shield-halved" style="color:var(--primary);"></i> Key Plan Benefits
+                                </span>
+                                <span style="background:rgba(16,185,129,0.15);color:#10B981;font-size:0.6875rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:var(--radius-full);display:flex;align-items:center;gap:0.3rem;">
+                                    <span style="width:5px;height:5px;background:#10B981;border-radius:50%;"></span> Active 24/7
+                                </span>
+                            </div>
+                            <div class="bento-benefits-grid">
+                                <div class="bento-benefit-item">
+                                    <div class="bento-benefit-label"><i class="fas fa-percent"></i> NCB Discount</div>
+                                    <div class="bento-benefit-val">Up to 85%</div>
+                                </div>
+                                <div class="bento-benefit-item">
+                                    <div class="bento-benefit-label"><i class="fas fa-warehouse"></i> Cashless Garages</div>
+                                    <div class="bento-benefit-val">5,000+ Units</div>
+                                </div>
+                                <div class="bento-benefit-item">
+                                    <div class="bento-benefit-label"><i class="fas fa-file-invoice"></i> Documentation</div>
+                                    <div class="bento-benefit-val">100% Digital</div>
+                                </div>
+                                <div class="bento-benefit-item">
+                                    <div class="bento-benefit-label"><i class="fas fa-bolt"></i> Policy Delivery</div>
+                                    <div class="bento-benefit-val">Instant (5 Min)</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 style="color:#fff;margin-bottom:0.75rem;">Motor Insurance Renewal</h3>
-                    <p style="color:rgba(255,255,255,0.65);max-width:380px;line-height:1.75;margin-bottom:1.5rem;">Renew your two-wheeler or four-wheeler insurance without paperwork hassles. Compare plans from 20+ insurers and choose the best coverage at the lowest premium.</p>
-                    <a href="services.html#insurance" class="btn btn-primary">Get Insurance <i class="fas fa-arrow-right"></i></a>
+
+                    <!-- Bottom: Integrated PUC & Doorstep Services -->
+                    <div class="bento-inner-services-row">
+                        <div class="bento-inner-service-card">
+                            <div class="bento-inner-service-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <div>
+                                <h4>PUC Assistance</h4>
+                                <p>Quick pollution under control certification. Avoid traffic fines.</p>
+                            </div>
+                        </div>
+                        <div class="bento-inner-service-card">
+                            <div class="bento-inner-service-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div>
+                                <h4>Doorstep Service</h4>
+                                <p>Document pickup & delivery at your home or office.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- RC Transfer -->
-            <div class="bento-cell bento-cell-2" style="padding:1.75rem;">
-                <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--primary);margin-bottom:1rem;font-size:1.125rem;">
-                    <i class="fas fa-file-alt"></i>
-                </div>
-                <h4 style="margin-bottom:0.5rem;">RC Transfer</h4>
-                <p style="font-size:0.875rem;color:var(--text-muted);">Seamless ownership transfer at RTO. Private & commercial vehicles.</p>
-            </div>
-            <!-- Fitness Certificate -->
-            <div class="bento-cell bento-cell-3" style="padding:1.75rem;">
-                <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--primary);margin-bottom:1rem;font-size:1.125rem;">
-                    <i class="fas fa-clipboard-check"></i>
-                </div>
-                <h4 style="margin-bottom:0.5rem;">Fitness Certificate</h4>
-                <p style="font-size:0.875rem;color:var(--text-muted);">Annual inspection and fitness certification for commercial vehicles.</p>
-            </div>
-            <!-- PUC -->
-            <div class="bento-cell bento-cell-4" style="padding:1.75rem;">
-                <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--primary);margin-bottom:1rem;font-size:1.125rem;">
-                    <i class="fas fa-wind"></i>
-                </div>
-                <h4 style="margin-bottom:0.5rem;">PUC Assistance</h4>
-                <p style="font-size:0.875rem;color:var(--text-muted);">Quick pollution under control certification. Avoid traffic fines.</p>
-            </div>
-            <!-- Doorstep -->
-            <div class="bento-cell bento-cell-5" style="padding:1.75rem;background:var(--primary);color:#fff;">
-                <div style="font-size:1.5rem;margin-bottom:0.875rem;">🏠</div>
-                <h4 style="color:#fff;margin-bottom:0.5rem;">Doorstep Service</h4>
-                <p style="color:rgba(255,255,255,0.75);font-size:0.875rem;">Document pickup & delivery at your home or office.</p>
-            </div>
-            <!-- Express -->
-            <div class="bento-cell bento-cell-6" style="padding:1.75rem;">
-                <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;color:var(--amber);margin-bottom:1rem;font-size:1.125rem;">
-                    <i class="fas fa-bolt"></i>
-                </div>
-                <h4 style="margin-bottom:0.5rem;">Express Processing</h4>
-                <p style="font-size:0.875rem;color:var(--text-muted);">Priority processing for urgent document requirements.</p>
-            </div>
+            <!-- Two-Wheeler Showcase -->
+            <a href="#two-wheelers" class="bento-cell bento-cell-2 bento-vehicle-card" title="Explore Two-Wheeler Services">
+                <img src="assets/images/bento-two-wheeler.jpg" alt="Two-Wheeler Motorcycle and Scooter Documentation" class="bento-vehicle-img" loading="lazy">
+            </a>
+
+            <!-- Four-Wheeler Showcase -->
+            <a href="#four-wheelers" class="bento-cell bento-cell-3 bento-vehicle-card" title="Explore Four-Wheeler Services">
+                <img src="assets/images/bento-four-wheeler.jpg" alt="Four-Wheeler Car and SUV Documentation" class="bento-vehicle-img" loading="lazy">
+            </a>
         </div>
     </div>
 </section>
@@ -154,7 +382,7 @@
 <!-- ========== PROCESS TIMELINE (Vertical) ========== -->
 <section class="section section-alt">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+        <div class="split-layout-2col">
             <div class="animate-on-scroll">
                 <div class="section-label">How It Works</div>
                 <h2 style="margin-bottom:1rem;">Your Journey With VehicleSure</h2>
@@ -192,7 +420,7 @@
             </div>
             <div class="animate-on-scroll">
                 <!-- Document preview card -->
-                <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-2xl);padding:2rem;box-shadow:var(--shadow-lg);">
+                <div class="process-tracker-card">
                     <div style="background:var(--primary-subtle);border-radius:var(--radius-xl);padding:1.5rem;margin-bottom:1.5rem;text-align:center;">
                         <i class="fas fa-file-shield" style="font-size:3rem;color:var(--primary);margin-bottom:1rem;display:block;"></i>
                         <h4 style="margin-bottom:0.5rem;">Application Tracker</h4>
@@ -223,64 +451,67 @@
     </div>
 </section>
 
-<!-- ========== TABBED VEHICLE COVERAGE ========== -->
-<section class="section">
+<!-- ========== TWO-WHEELER SERVICES SECTION ========== -->
+<section class="section" id="two-wheelers">
     <div class="container">
         <div class="section-header animate-on-scroll">
-            <div class="section-label">Vehicle Types</div>
-            <h2>Select Your Vehicle Category</h2>
-            <p>Tailored documentation services for every type of vehicle on Indian roads.</p>
+            <div class="section-label"><i class="fas fa-motorcycle"></i> Two-Wheelers</div>
+            <h2>Two-Wheeler Documentation Services</h2>
+            <p>Tailored documentation, insurance renewal, and RTO services for all bikes, scooters, and mopeds.</p>
         </div>
-        <div class="tab-nav animate-on-scroll">
-            <button class="tab-btn active" data-tab="tab-2w" data-group="vehicles" onclick="switchTab('tab-2w','vehicles')">🏍️ Two-Wheelers</button>
-            <button class="tab-btn" data-tab="tab-4w" data-group="vehicles" onclick="switchTab('tab-4w','vehicles')">🚗 Four-Wheelers</button>
-        </div>
-        <div id="tab-2w" class="tab-panel active" data-group="vehicles">
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-file-shield"></i></div>
-                    <h4>Third-Party Insurance</h4>
-                    <p>Mandatory coverage for all bikes and scooters against third-party damage.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-umbrella"></i></div>
-                    <h4>Comprehensive Cover</h4>
-                    <p>Own damage + third-party coverage for complete protection of your two-wheeler.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
-                    <h4>RC Ownership Transfer</h4>
-                    <p>Transfer RC from seller to buyer after second-hand bike or scooter purchase.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-wind"></i></div>
-                    <h4>PUC Certificate</h4>
-                    <p>Get your bike/scooter PUC done quickly and avoid challan during traffic checks.</p>
-                </div>
+        <div class="grid grid-2 animate-on-scroll">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-file-shield"></i></div>
+                <h4>Third-Party Insurance</h4>
+                <p>Mandatory coverage for all bikes and scooters against third-party damage.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-umbrella"></i></div>
+                <h4>Comprehensive Cover</h4>
+                <p>Own damage + third-party coverage for complete protection.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                <h4>RC Ownership Transfer</h4>
+                <p>Transfer RC from seller to buyer after second-hand bike or scooter purchase.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-wind"></i></div>
+                <h4>PUC Certificate</h4>
+                <p>Get your bike/scooter PUC done quickly and avoid challan during traffic checks.</p>
             </div>
         </div>
-        <div id="tab-4w" class="tab-panel" data-group="vehicles">
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-car-crash"></i></div>
-                    <h4>Car Insurance Renewal</h4>
-                    <p>Renew your car's comprehensive or third-party insurance with instant policy issuance.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
-                    <h4>RC Transfer & Mutation</h4>
-                    <p>Complete RTO formalities for car ownership transfer between buyer and seller.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-tools"></i></div>
-                    <h4>Fitness Certificate</h4>
-                    <p>Annual fitness inspection and certificate for commercial cars, taxis, and older vehicles.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-leaf"></i></div>
-                    <h4>PUC & Emission</h4>
-                    <p>Pollution certificate for petrol and diesel cars. Valid at all checkpoints.</p>
-                </div>
+    </div>
+</section>
+
+<!-- ========== FOUR-WHEELER SERVICES SECTION ========== -->
+<section class="section section-alt" id="four-wheelers">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-label"><i class="fas fa-car"></i> Four-Wheelers</div>
+            <h2>Four-Wheeler Documentation Services</h2>
+            <p>Comprehensive insurance renewal, RC transfer, fitness certificates, and emission compliance for cars and commercial vehicles.</p>
+        </div>
+        <div class="grid grid-2 animate-on-scroll">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-car-crash"></i></div>
+                <h4>Car Insurance Renewal</h4>
+                <p>Renew your car's comprehensive insurance with instant car policy issuance.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+                <h4>RC Transfer & Mutation</h4>
+                <p>Complete RTO formalities for car ownership transfer between buyer and seller.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h4>Fitness Certificate</h4>
+                <p>Annual fitness inspection and certificate for cars, taxis, and older vehicles.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-leaf"></i></div>
+                <h4>PUC & Emission</h4>
+                <p>Pollution certificate for petrol, cng and diesel cars. Valid at all checkpoints.</p>
             </div>
         </div>
     </div>
@@ -289,9 +520,9 @@
 <!-- ========== DOCUMENTS PREVIEW ========== -->
 <section class="section section-alt">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+        <div class="split-layout-2col">
             <div class="animate-on-scroll">
-                <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-2xl);padding:2rem;box-shadow:var(--shadow-md);">
+                <div class="checklist-preview-card">
                     <h4 style="margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fas fa-clipboard-list" style="color:var(--primary);"></i> Quick Document Checklist</h4>
                     <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.5rem;">
                         <div class="doc-list-item"><i class="fas fa-check"></i> Original RC Book / Smart Card</div>
@@ -346,7 +577,7 @@
         </div>
         <div class="grid grid-3 animate-on-scroll">
             <div class="pricing-card">
-                <div style="width:3rem;height:3rem;border-radius:var(--radius-xl);background:var(--bg-surface);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem;">⚡</div>
+                <div style="width:3rem;height:3rem;border-radius:var(--radius-xl);background:var(--bg-surface);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.25rem;color:var(--primary);"><i class="fas fa-bolt"></i></div>
                 <h4>Basic</h4>
                 <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:0.5rem;">PUC & Standard Insurance</p>
                 <div class="price">₹299<span>/service</span></div>
@@ -359,7 +590,7 @@
                 <a href="contact.html" class="btn btn-secondary w-full">Get Started</a>
             </div>
             <div class="pricing-card popular">
-                <div style="width:3rem;height:3rem;border-radius:var(--radius-xl);background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem;">🛡️</div>
+                <div style="width:3rem;height:3rem;border-radius:var(--radius-xl);background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.25rem;color:var(--primary);"><i class="fas fa-shield-alt"></i></div>
                 <h4>Standard</h4>
                 <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:0.5rem;">RC Transfer & Full Insurance</p>
                 <div class="price">₹799<span>/service</span></div>
@@ -373,7 +604,7 @@
                 <a href="contact.html" class="btn btn-primary w-full">Get Started</a>
             </div>
             <div class="pricing-card">
-                <div style="width:3rem;height:3rem;border-radius:var(--radius-xl);background:var(--bg-surface);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem;">🚀</div>
+                <div style="width:3rem;height:3rem;border-radius:var(--radius-xl);background:var(--bg-surface);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.25rem;color:var(--primary);"><i class="fas fa-rocket"></i></div>
                 <h4>Express</h4>
                 <p style="color:var(--text-muted);font-size:0.875rem;margin-bottom:0.5rem;">Priority Processing</p>
                 <div class="price">₹1,299<span>/service</span></div>
@@ -395,118 +626,178 @@
     </div>
 </section>
 
-<!-- ========== TESTIMONIALS — MASONRY LAYOUT ========== -->
-<section class="section section-alt">
+<!-- ========== TESTIMONIALS (2-Card Dynamic Switcher) ========== -->
+<section class="section section-alt" id="testimonials">
     <div class="container">
         <div class="section-header animate-on-scroll">
             <div class="section-label">What Clients Say</div>
             <h2>Stories From Real Vehicle Owners</h2>
             <p>Over 12,000 customers trust VehicleSure for their vehicle documentation needs.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start;" class="animate-on-scroll">
-            <div style="display:flex;flex-direction:column;gap:1.5rem;">
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="quote">"The fastest RC transfer I've ever seen. They collected documents from my home and delivered the new RC within 10 days. Absolutely worth it!"</p>
-                    <div class="author">
-                        <div class="author-avatar">S</div>
-                        <div><div class="author-name">Suresh Kumar</div><div class="author-meta">Maruti Swift — RC Transfer</div></div>
+        
+        <!-- 2-Card Switcher Container -->
+        <div class="testimonials-slider-container animate-on-scroll" id="testiSliderContainer">
+            <div class="testimonials-slider-track">
+                <!-- Slide 1 (Cards 1 & 2) -->
+                <div class="testimonial-slide active">
+                    <div class="testimonial-slide-grid">
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="quote">"The fastest RC transfer I've ever seen. They collected documents from my home and delivered the new RC within 10 days. Absolutely worth it!"</p>
+                            <div class="author">
+                                <div class="author-avatar">S</div>
+                                <div><div class="author-name">Suresh Kumar</div><div class="author-meta">Maruti Swift — RC Transfer</div></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="quote">"I was confused about renewal options and NCB claims. Their advisor explained everything patiently, compared quotes, and got me the best policy plan!"</p>
+                            <div class="author">
+                                <div class="author-avatar">A</div>
+                                <div><div class="author-name">Anitha Krishnan</div><div class="author-meta">Honda City — Insurance Renewal</div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial-card" style="background:var(--primary);border-color:transparent;">
-                    <div class="stars" style="color:#FFD700;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="quote" style="color:rgba(255,255,255,0.85);">"VehicleSure got my taxi's fitness certificate done in 48 hours. My livelihood depends on my vehicle, and they understood that urgency perfectly."</p>
-                    <div class="author">
-                        <div class="author-avatar" style="border-color:#fff;color:#fff;background:rgba(255,255,255,0.15);">M</div>
-                        <div><div class="author-name" style="color:#fff;">Mohammed Rafi</div><div class="author-meta" style="color:rgba(255,255,255,0.65);">Toyota Etios Taxi — Fitness Cert</div></div>
+
+                <!-- Slide 2 (Cards 3 & 4) -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-slide-grid">
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="quote">"My two-wheeler insurance had lapsed for over 2 months. VehicleSure arranged prompt vehicle inspection and issued the renewed policy on the very same day!"</p>
+                            <div class="author">
+                                <div class="author-avatar">D</div>
+                                <div><div class="author-name">Deepika Nair</div><div class="author-meta">Honda Activa — Insurance Renewal</div></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="quote">"VehicleSure got my commercial taxi's fitness certificate completed in 48 hours. My livelihood depends on my cab, and they handled urgency with total professionalism!"</p>
+                            <div class="author">
+                                <div class="author-avatar">M</div>
+                                <div><div class="author-name">Mohammed Rafi</div><div class="author-meta">Toyota Etios Taxi — Fitness Cert</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 (Cards 5 & 6) -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-slide-grid">
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <p class="quote">"Got the PUC emission certificate for my Royal Enfield done in 20 minutes flat. Zero waiting time and zero hassle. Will definitely renew insurance here!"</p>
+                            <div class="author">
+                                <div class="author-avatar">V</div>
+                                <div><div class="author-name">Vikram Singh</div><div class="author-meta">Royal Enfield — PUC</div></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="quote">"Five-star service from start to finish. They handled all paperwork and RTO clearance for my commercial truck transfer seamlessly and at very fair rates!"</p>
+                            <div class="author">
+                                <div class="author-avatar">R</div>
+                                <div><div class="author-name">Ramesh Babu</div><div class="author-meta">Tata Truck — RC Transfer</div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:1.5rem;">
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="quote">"I was confused about insurance renewal options. Their advisor explained everything patiently and got me the best plan for my car at a lower premium than before!"</p>
-                    <div class="author">
-                        <div class="author-avatar">A</div>
-                        <div><div class="author-name">Anitha Krishnan</div><div class="author-meta">Honda City — Insurance Renewal</div></div>
-                    </div>
+
+            <!-- Controls (Nav buttons + Dots) -->
+            <div class="testimonials-slider-controls">
+                <button type="button" class="testi-nav-btn testi-prev" onclick="prevTestiSlide()" aria-label="Previous testimonials">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testi-dots" id="testiDots">
+                    <button type="button" class="testi-dot active" onclick="goToTestiSlide(0)" aria-label="Slide 1"></button>
+                    <button type="button" class="testi-dot" onclick="goToTestiSlide(1)" aria-label="Slide 2"></button>
+                    <button type="button" class="testi-dot" onclick="goToTestiSlide(2)" aria-label="Slide 3"></button>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                    <p class="quote">"Got PUC for my Royal Enfield done in 20 minutes. No waiting, no hassle. Will use VehicleSure for insurance renewal next month too."</p>
-                    <div class="author">
-                        <div class="author-avatar">V</div>
-                        <div><div class="author-name">Vikram Singh</div><div class="author-meta">Royal Enfield — PUC</div></div>
-                    </div>
-                </div>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:1.5rem;">
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="quote">"My scooter insurance had lapsed for 2 months. VehicleSure arranged inspection and renewed it on the same day. Excellent service!"</p>
-                    <div class="author">
-                        <div class="author-avatar">D</div>
-                        <div><div class="author-name">Deepika Nair</div><div class="author-meta">Honda Activa — Insurance Renewal</div></div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="quote">"Five-star service from start to finish. They handled everything for my truck's RC transfer. Professional, punctual, and reasonably priced."</p>
-                    <div class="author">
-                        <div class="author-avatar">R</div>
-                        <div><div class="author-name">Ramesh Babu</div><div class="author-meta">Tata Truck — RC Transfer</div></div>
-                    </div>
-                </div>
+                <button type="button" class="testi-nav-btn testi-next" onclick="nextTestiSlideManual()" aria-label="Next testimonials">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== CONTACT STRIP ========== -->
+<!-- ========== CONTACT STRIP (Design 2: Fast-Track VIP Request Suite) ========== -->
 <section class="section">
     <div class="container">
-        <div style="background:linear-gradient(135deg,var(--secondary) 0%,#1A2D5A 100%);border-radius:var(--radius-3xl);padding:4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:-30%;right:-5%;width:450px;height:450px;background:radial-gradient(circle,rgba(30,79,216,0.35) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
-            <div style="position:relative;z-index:1;" class="animate-on-scroll">
-                <div class="section-label" style="color:rgba(255,255,255,0.7);">Book Now</div>
-                <h2 style="color:#fff;margin-bottom:1rem;">Ready to Sort Your Vehicle Documents?</h2>
-                <p style="color:rgba(255,255,255,0.65);margin-bottom:1.5rem;">Talk to our experts today. Free consultation, transparent pricing, and fast processing guaranteed.</p>
-                <div style="display:flex;flex-direction:column;gap:0.75rem;">
-                    <div style="display:flex;align-items:center;gap:0.875rem;color:rgba(255,255,255,0.75);font-size:0.9rem;">
-                        <i class="fas fa-phone-alt" style="color:var(--primary);width:1rem;"></i>
-                        <span>+91 98765 43210</span>
+        <div class="cta-suite-home2 animate-on-scroll">
+            <!-- Left Side: VIP Consultation Info -->
+            <div style="position:relative;z-index:1;">
+                <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(217,119,6,0.2);border:1px solid rgba(217,119,6,0.35);border-radius:var(--radius-full);padding:0.35rem 0.85rem;margin-bottom:1.25rem;">
+                    <i class="fas fa-bolt" style="color:var(--primary);font-size:0.75rem;"></i>
+                    <span style="color:#FEF3C7;font-family:var(--font-heading);font-weight:700;font-size:0.75rem;letter-spacing:0.06em;">FAST-TRACK ADVISORY</span>
+                </div>
+                <h2 style="color:#FFFFFF;margin-bottom:1rem;line-height:1.2;font-size:clamp(1.75rem,3.5vw,2.5rem);">Ready to Sort Your Vehicle Documents?</h2>
+                <p style="color:rgba(255,255,255,0.72);margin-bottom:1.5rem;line-height:1.7;font-size:0.95rem;">Request a priority callback or talk to our certified RTO advisors directly. Free consultation, upfront fixed fees, and instant tracking guaranteed.</p>
+                
+                <div class="cta-contact-cards">
+                    <a href="tel:+919876543210" class="cta-contact-box">
+                        <div class="cta-contact-box-left">
+                            <div class="cta-contact-box-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="cta-contact-box-info">
+                                <div class="cta-contact-box-lbl">Direct Support Helpline</div>
+                                <div class="cta-contact-box-val">+91 98765 43210</div>
+                            </div>
+                        </div>
+                        <span class="cta-contact-box-badge">CALL NOW</span>
+                    </a>
+
+                    <div class="cta-contact-box" style="cursor:default;">
+                        <div class="cta-contact-box-left">
+                            <div class="cta-contact-box-icon cta-contact-box-icon-wa">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="cta-contact-box-info">
+                                <div class="cta-contact-box-lbl">WhatsApp Priority Desk</div>
+                                <div class="cta-contact-box-val">hello@vehiclesure.in</div>
+                            </div>
+                        </div>
+                        <span class="cta-contact-box-badge cta-contact-box-badge-wa">ONLINE 24/7</span>
                     </div>
-                    <div style="display:flex;align-items:center;gap:0.875rem;color:rgba(255,255,255,0.75);font-size:0.9rem;">
-                        <i class="fas fa-envelope" style="color:var(--primary);width:1rem;"></i>
-                        <span>hello@vehiclesure.in</span>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:0.875rem;color:rgba(255,255,255,0.75);font-size:0.9rem;">
-                        <i class="fas fa-clock" style="color:var(--primary);width:1rem;"></i>
-                        <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
+
+                    <div class="cta-contact-hours">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon – Sat: 9:00 AM – 7:00 PM • 2-Hour Response Guaranteed</span>
                     </div>
                 </div>
             </div>
-            <div style="position:relative;z-index:1;" class="animate-on-scroll">
-                <form onsubmit="event.preventDefault();alert('Thank you! We will contact you within 2 hours.');this.reset();" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-2xl);padding:2rem;backdrop-filter:blur(8px);">
-                    <div class="form-group">
-                        <label class="form-label" style="color:rgba(255,255,255,0.8);" for="strip-name">Full Name</label>
-                        <input type="text" id="strip-name" class="form-input" placeholder="Your full name" required style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:#fff;">
+
+            <!-- Right Side: Clean Glassmorphism Lead Suite -->
+            <div class="cta-suite-form-card">
+                <form onsubmit="event.preventDefault();alert('Thank you! Our senior advisor will contact you within 2 hours.');this.reset();">
+                    <div class="cta-form-type-pills">
+                        <button type="button" class="cta-type-btn active" onclick="this.parentElement.querySelectorAll('.cta-type-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-motorcycle"></i> 2-Wheeler</button>
+                        <button type="button" class="cta-type-btn" onclick="this.parentElement.querySelectorAll('.cta-type-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');"><i class="fas fa-car"></i> 4-Wheeler</button>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" style="color:rgba(255,255,255,0.8);" for="strip-phone">Phone Number</label>
-                        <input type="tel" id="strip-phone" class="form-input" placeholder="+91 00000 00000" required style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:#fff;">
+                    <div class="form-group" style="margin-bottom:1rem;">
+                        <label class="form-label" style="color:rgba(255,255,255,0.85);font-size:0.8125rem;" for="strip-name">Full Name</label>
+                        <input type="text" id="strip-name" class="form-input" placeholder="e.g. Ramesh Kumar" required>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" style="color:rgba(255,255,255,0.8);" for="strip-service">Service Needed</label>
-                        <select id="strip-service" class="form-input" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:#fff;">
-                            <option value="">Select service</option>
-                            <option>Insurance Renewal</option>
-                            <option>RC Transfer</option>
-                            <option>Fitness Certificate</option>
-                            <option>PUC Assistance</option>
+                    <div class="form-group" style="margin-bottom:1rem;">
+                        <label class="form-label" style="color:rgba(255,255,255,0.85);font-size:0.8125rem;" for="strip-phone">Phone Number</label>
+                        <input type="tel" id="strip-phone" class="form-input" placeholder="+91 98765 00000" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.25rem;">
+                        <label class="form-label" style="color:rgba(255,255,255,0.85);font-size:0.8125rem;" for="strip-service">Service Needed</label>
+                        <select id="strip-service" class="form-input" required>
+                            <option value="" style="background:#18181B;color:#F4F4F5;">Select required service</option>
+                            <option value="Insurance Renewal" style="background:#18181B;color:#F4F4F5;">Insurance Renewal</option>
+                            <option value="RC Transfer" style="background:#18181B;color:#F4F4F5;">RC Transfer & Ownership</option>
+                            <option value="Fitness Certificate" style="background:#18181B;color:#F4F4F5;">Fitness Certificate (FC)</option>
+                            <option value="PUC Assistance" style="background:#18181B;color:#F4F4F5;">PUC & Emission Testing</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary w-full btn-lg">Send Request</button>
+                    <button type="submit" class="btn btn-primary w-full btn-lg" style="box-shadow:0 8px 24px rgba(217,119,6,0.35);">
+                        <i class="fas fa-paper-plane"></i> Get Free Callback
+                    </button>
                 </form>
             </div>
         </div>
@@ -517,5 +808,110 @@
 <div id="main-footer"></div>
 
 <script src="components.js"></script>
+<script>
+    let currentHeroSlide = 0;
+    let heroSlideTimer = null;
+
+    function showHeroSlide(index) {
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        if (!slides.length) return;
+
+        currentHeroSlide = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentHeroSlide);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentHeroSlide);
+        });
+    }
+
+    function nextHeroSlide() {
+        showHeroSlide(currentHeroSlide + 1);
+    }
+
+    function nextHeroSlideManual() {
+        clearInterval(heroSlideTimer);
+        showHeroSlide(currentHeroSlide + 1);
+        startHeroAutoSlide();
+    }
+
+    function prevHeroSlide() {
+        clearInterval(heroSlideTimer);
+        showHeroSlide(currentHeroSlide - 1);
+        startHeroAutoSlide();
+    }
+
+    function goToSlide(index) {
+        clearInterval(heroSlideTimer);
+        showHeroSlide(index);
+        startHeroAutoSlide();
+    }
+
+    function startHeroAutoSlide() {
+        clearInterval(heroSlideTimer);
+        heroSlideTimer = setInterval(nextHeroSlide, 5000);
+    }
+
+    // --- Testimonials 2-Card Switcher Logic ---
+    let currentTestiSlide = 0;
+    let testiSlideTimer = null;
+
+    function showTestiSlide(index) {
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testi-dot');
+        if (!slides.length) return;
+
+        currentTestiSlide = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentTestiSlide);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentTestiSlide);
+        });
+    }
+
+    function nextTestiSlide() {
+        showTestiSlide(currentTestiSlide + 1);
+    }
+
+    function nextTestiSlideManual() {
+        clearInterval(testiSlideTimer);
+        showTestiSlide(currentTestiSlide + 1);
+        startTestiAutoSlide();
+    }
+
+    function prevTestiSlide() {
+        clearInterval(testiSlideTimer);
+        showTestiSlide(currentTestiSlide - 1);
+        startTestiAutoSlide();
+    }
+
+    function goToTestiSlide(index) {
+        clearInterval(testiSlideTimer);
+        showTestiSlide(index);
+        startTestiAutoSlide();
+    }
+
+    function startTestiAutoSlide() {
+        clearInterval(testiSlideTimer);
+        testiSlideTimer = setInterval(nextTestiSlide, 6000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        startHeroAutoSlide();
+        startTestiAutoSlide();
+
+        const sliderWrap = document.getElementById('testiSliderContainer');
+        if (sliderWrap) {
+            sliderWrap.addEventListener('mouseenter', () => clearInterval(testiSlideTimer));
+            sliderWrap.addEventListener('mouseleave', startTestiAutoSlide);
+        }
+    });
+</script>
 </body>
 </html>

@@ -14,7 +14,11 @@
 <div id="main-nav"></div>
 
 <!-- PAGE HEADER -->
-<div class="page-header" id="services">
+<section class="page-header hero-page" id="services" aria-label="Services Header">
+    <div class="page-header-bg">
+        <img src="assets/images/banner-services.jpg" alt="VehicleSure Comprehensive Services Hub">
+    </div>
+    <div class="page-header-overlay"></div>
     <div class="container">
         <div class="breadcrumb">
             <a href="index.html">Home</a>
@@ -24,7 +28,7 @@
         <h1>Our Services</h1>
         <p>Comprehensive motor insurance and vehicle documentation services for two-wheelers and four-wheelers — all handled by certified experts.</p>
     </div>
-</div>
+</section>
 
 <!-- SERVICE INTRO CARDS -->
 <section class="section">
@@ -48,7 +52,7 @@
             <a href="#puc" class="service-card" style="text-decoration:none;cursor:pointer;">
                 <div class="service-icon"><i class="fas fa-wind"></i></div>
                 <h4>PUC Assistance</h4>
-                <p>Quick pollution under control certificate for all vehicle types.</p>
+                <p>Quick pollution under control certificate for all types of vehicle.</p>
             </a>
         </div>
     </div>
@@ -57,18 +61,31 @@
 <!-- ===== INSURANCE RENEWAL ===== -->
 <section class="section section-alt" id="insurance">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
-            <div class="animate-on-scroll">
+        <div class="split-layout-2col">
+            <div class="animate-on-scroll service-visual-col">
+                <div style="border-radius:var(--radius-2xl);overflow:hidden;height:420px;position:relative;box-shadow:var(--shadow-lg);border:1px solid var(--border-light);">
+                    <img src="assets/images/service-insurance.jpg" alt="Professional Motor Insurance Renewal Advisor presenting policy certificate" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+                <!-- Info card -->
+                <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;margin-top:1.25rem;display:flex;align-items:center;gap:1rem;">
+                    <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;color:#10B981;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
+                    <div>
+                        <div style="font-family:var(--font-heading);font-weight:600;font-size:0.9375rem;color:var(--text-heading);">Instant Digital Policy</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted);">Policy document emailed within 2 hours of payment</div>
+                    </div>
+                </div>
+            </div>
+            <div class="animate-on-scroll service-detail-col">
                 <div class="section-label">Service 01</div>
                 <h2 style="margin-bottom:1rem;">Motor Insurance Renewal</h2>
                 <p style="margin-bottom:1.5rem;">Keep your vehicle legally protected on the road. We help you renew third-party and comprehensive motor insurance for all two-wheelers and four-wheelers — quickly, accurately, and at the best available premium rates.</p>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;">
                     <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;">
-                        <div style="font-family:var(--font-heading);font-weight:700;font-size:1.5rem;color:var(--primary);margin-bottom:0.25rem;">20+</div>
+                        <div style="font-family:var(--font-heading);font-weight:600;font-size:1.5rem;color:var(--primary);margin-bottom:0.25rem;">20+</div>
                         <div style="font-size:0.8125rem;color:var(--text-muted);">Insurance Partners</div>
                     </div>
                     <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;">
-                        <div style="font-family:var(--font-heading);font-weight:700;font-size:1.5rem;color:var(--primary);margin-bottom:0.25rem;">24hr</div>
+                        <div style="font-family:var(--font-heading);font-weight:600;font-size:1.5rem;color:var(--primary);margin-bottom:0.25rem;">24hr</div>
                         <div style="font-size:0.8125rem;color:var(--text-muted);">Policy Issuance</div>
                     </div>
                 </div>
@@ -104,23 +121,6 @@
                     </div>
                 </div>
             </div>
-            <div class="animate-on-scroll">
-                <div style="border-radius:var(--radius-2xl);overflow:hidden;height:420px;background:linear-gradient(135deg,var(--primary-light),var(--bg-surface));display:flex;align-items:center;justify-content:center;position:relative;">
-                    <div style="text-align:center;color:var(--primary);padding:2rem;">
-                        <i class="fas fa-file-shield" style="font-size:4rem;margin-bottom:1rem;display:block;opacity:0.3;"></i>
-                        <div style="font-family:var(--font-heading);font-weight:600;color:var(--text-muted);font-size:0.875rem;">Insurance renewal service image</div>
-                        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.375rem;">[Replace with actual image]</div>
-                    </div>
-                </div>
-                <!-- Info card -->
-                <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;margin-top:1.25rem;display:flex;align-items:center;gap:1rem;">
-                    <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;color:#10B981;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                    <div>
-                        <div style="font-family:var(--font-heading);font-weight:600;font-size:0.9375rem;color:var(--text-heading);">Instant Digital Policy</div>
-                        <div style="font-size:0.8125rem;color:var(--text-muted);">Policy document emailed within 2 hours of payment</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -128,14 +128,10 @@
 <!-- ===== RC TRANSFER ===== -->
 <section class="section" id="rc">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
-            <div class="animate-on-scroll">
-                <div style="border-radius:var(--radius-2xl);overflow:hidden;height:420px;background:linear-gradient(135deg,var(--bg-surface),#E8EFFE);display:flex;align-items:center;justify-content:center;position:relative;">
-                    <div style="text-align:center;color:var(--primary);padding:2rem;">
-                        <i class="fas fa-file-alt" style="font-size:4rem;margin-bottom:1rem;display:block;opacity:0.3;"></i>
-                        <div style="font-family:var(--font-heading);font-weight:600;color:var(--text-muted);font-size:0.875rem;">RC transfer documents image</div>
-                        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.375rem;">[Replace with actual image]</div>
-                    </div>
+        <div class="split-layout-2col">
+            <div class="animate-on-scroll service-visual-col">
+                <div style="border-radius:var(--radius-2xl);overflow:hidden;height:420px;position:relative;box-shadow:var(--shadow-lg);border:1px solid var(--border-light);">
+                    <img src="assets/images/service-rc-transfer.jpg" alt="Official RTO Form 29, Form 30 and Vehicle Registration Smart Card with car keys" style="width:100%;height:100%;object-fit:cover;display:block;">
                 </div>
                 <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;margin-top:1.25rem;display:flex;align-items:center;gap:1rem;">
                     <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0;"><i class="fas fa-building"></i></div>
@@ -145,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="animate-on-scroll">
+            <div class="animate-on-scroll service-detail-col">
                 <div class="section-label">Service 02</div>
                 <h2 style="margin-bottom:1rem;">RC Ownership Transfer</h2>
                 <p style="margin-bottom:1.5rem;">Transferring a vehicle changes hands legally through an RC transfer at the RTO. Our experts handle the entire process — from Form 29/30 preparation to final RC update — so you don't have to visit the RTO even once.</p>
@@ -192,21 +188,33 @@
 <!-- ===== FITNESS CERTIFICATE ===== -->
 <section class="section section-alt" id="fitness">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
-            <div class="animate-on-scroll">
+        <div class="split-layout-2col">
+            <div class="animate-on-scroll service-visual-col">
+                <div style="border-radius:var(--radius-2xl);overflow:hidden;height:420px;position:relative;box-shadow:var(--shadow-lg);border:1px solid var(--border-light);">
+                    <img src="assets/images/service-fitness.jpg" alt="Certified Vehicle Fitness Inspector performing roadworthiness inspection in service bay" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+                <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;margin-top:1.25rem;display:flex;align-items:center;gap:1rem;">
+                    <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;color:var(--amber);flex-shrink:0;"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div>
+                        <div style="font-family:var(--font-heading);font-weight:600;font-size:0.9375rem;color:var(--text-heading);">Penalty Warning</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted);">Operating commercial vehicles without fitness certificate can result in ₹5,000 fine.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="animate-on-scroll service-detail-col">
                 <div class="section-label">Service 03</div>
                 <h2 style="margin-bottom:1rem;">Fitness Certificate</h2>
                 <p style="margin-bottom:1.5rem;">A fitness certificate confirms that your vehicle meets roadworthiness standards set by the government. It is mandatory for commercial vehicles and personal vehicles over 15 years old. Our team arranges the inspection and paperwork so you get the certificate fast.</p>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;">
                     <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;text-align:center;">
-                        <div style="font-size:2rem;margin-bottom:0.5rem;">🚌</div>
+                        <div style="font-size:1.75rem;margin-bottom:0.5rem;color:var(--primary);"><i class="fas fa-bus"></i></div>
                         <div style="font-family:var(--font-heading);font-weight:600;font-size:0.875rem;color:var(--text-heading);">Commercial Vehicles</div>
                         <div style="font-size:0.75rem;color:var(--text-muted);">Annual certificate required</div>
                     </div>
                     <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;text-align:center;">
-                        <div style="font-size:2rem;margin-bottom:0.5rem;">🚗</div>
+                        <div style="font-size:1.75rem;margin-bottom:0.5rem;color:var(--primary);"><i class="fas fa-car"></i></div>
                         <div style="font-family:var(--font-heading);font-weight:600;font-size:0.875rem;color:var(--text-heading);">Private 15+ Year Vehicles</div>
-                        <div style="font-size:0.75rem;color:var(--text-muted);">2-year certificate</div>
+                        <div style="font-size:0.75rem;color:var(--text-muted);">2-year validity certificate</div>
                     </div>
                 </div>
                 <h4 style="margin-bottom:1rem;">Inspection Covers:</h4>
@@ -229,22 +237,6 @@
                     </div>
                 </div>
             </div>
-            <div class="animate-on-scroll">
-                <div style="border-radius:var(--radius-2xl);overflow:hidden;height:420px;background:linear-gradient(135deg,#E8F5E9,var(--bg-surface));display:flex;align-items:center;justify-content:center;">
-                    <div style="text-align:center;color:var(--primary);padding:2rem;">
-                        <i class="fas fa-clipboard-check" style="font-size:4rem;margin-bottom:1rem;display:block;opacity:0.3;"></i>
-                        <div style="font-family:var(--font-heading);font-weight:600;color:var(--text-muted);font-size:0.875rem;">Fitness inspection service image</div>
-                        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.375rem;">[Replace with actual image]</div>
-                    </div>
-                </div>
-                <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;margin-top:1.25rem;display:flex;align-items:center;gap:1rem;">
-                    <div style="width:2.75rem;height:2.75rem;border-radius:var(--radius-lg);background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;color:var(--amber);flex-shrink:0;"><i class="fas fa-exclamation-triangle"></i></div>
-                    <div>
-                        <div style="font-family:var(--font-heading);font-weight:600;font-size:0.9375rem;color:var(--text-heading);">Penalty Warning</div>
-                        <div style="font-size:0.8125rem;color:var(--text-muted);">Operating commercial vehicles without fitness certificate can result in ₹5,000 fine.</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -252,27 +244,23 @@
 <!-- ===== PUC ASSISTANCE ===== -->
 <section class="section" id="puc">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
-            <div class="animate-on-scroll">
-                <div style="border-radius:var(--radius-2xl);overflow:hidden;height:420px;background:linear-gradient(135deg,#E3F2FD,var(--bg-surface));display:flex;align-items:center;justify-content:center;">
-                    <div style="text-align:center;color:var(--primary);padding:2rem;">
-                        <i class="fas fa-wind" style="font-size:4rem;margin-bottom:1rem;display:block;opacity:0.3;"></i>
-                        <div style="font-family:var(--font-heading);font-weight:600;color:var(--text-muted);font-size:0.875rem;">PUC emission testing image</div>
-                        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.375rem;">[Replace with actual image]</div>
-                    </div>
+        <div class="split-layout-2col">
+            <div class="animate-on-scroll service-visual-col">
+                <div style="border-radius:var(--radius-2xl);overflow:hidden;height:420px;position:relative;box-shadow:var(--shadow-lg);border:1px solid var(--border-light);">
+                    <img src="assets/images/service-puc.jpg" alt="Automotive computerized exhaust emission compliance testing in certified PUC center" style="width:100%;height:100%;object-fit:cover;display:block;">
                 </div>
                 <div style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:1.25rem;margin-top:1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;text-align:center;">
                     <div style="border-right:1px solid var(--border-light);padding-right:1rem;">
-                        <div style="font-family:var(--font-heading);font-weight:700;font-size:1.5rem;color:var(--primary);">6 mo</div>
-                        <div style="font-size:0.8125rem;color:var(--text-muted);">Petrol/CNG validity</div>
+                        <div style="font-family:var(--font-heading);font-weight:600;font-size:1.5rem;color:var(--primary);">6 mo</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted);">Petrol validity</div>
                     </div>
                     <div>
-                        <div style="font-family:var(--font-heading);font-weight:700;font-size:1.5rem;color:var(--primary);">3 mo</div>
+                        <div style="font-family:var(--font-heading);font-weight:600;font-size:1.5rem;color:var(--primary);">3 mo</div>
                         <div style="font-size:0.8125rem;color:var(--text-muted);">Diesel validity</div>
                     </div>
                 </div>
             </div>
-            <div class="animate-on-scroll">
+            <div class="animate-on-scroll service-detail-col">
                 <div class="section-label">Service 04</div>
                 <h2 style="margin-bottom:1rem;">PUC (Pollution Under Control) Assistance</h2>
                 <p style="margin-bottom:1.5rem;">A valid PUC certificate is mandatory under the Motor Vehicles Act. Traffic police conduct regular checks, and driving without a valid PUC can result in a ₹10,000 fine. We help you get your PUC quickly and without hassle.</p>
@@ -313,7 +301,7 @@
             <p>Contact us now for a free consultation. Our team is available Monday to Saturday, 9 AM – 7 PM.</p>
             <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
                 <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment</a>
-                <a href="documents.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.3);color:#fff;">Documents Needed</a>
+                <a href="documents.html" class="btn btn-outline-light btn-lg">Documents Needed</a>
             </div>
         </div>
     </div>

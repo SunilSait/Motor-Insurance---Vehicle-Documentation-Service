@@ -24,7 +24,7 @@
 
         .countdown-num {
             font-family: var(--font-heading);
-            font-weight: 700;
+            font-weight: 600;
             font-size: clamp(2.5rem, 6vw, 4rem);
             color: var(--primary);
             line-height: 1;
@@ -45,7 +45,7 @@
 
         .countdown-sep {
             font-family: var(--font-heading);
-            font-weight: 700;
+            font-weight: 600;
             font-size: 2.5rem;
             color: var(--primary);
             opacity: 0.4;
@@ -143,7 +143,7 @@
     <div style="max-width:620px;width:100%;margin:0 auto;padding:0 1rem;">
 
         <!-- Animated badge -->
-        <div style="display:inline-flex;align-items:center;gap:0.625rem;background:var(--primary-subtle);border:1px solid rgba(30,79,216,0.2);border-radius:var(--radius-full);padding:0.5rem 1.25rem;margin-bottom:1.75rem;">
+        <div style="display:inline-flex;align-items:center;gap:0.625rem;background:var(--primary-subtle);border:1px solid rgba(217, 119, 6,0.2);border-radius:var(--radius-full);padding:0.5rem 1.25rem;margin-bottom:1.75rem;">
             <span style="width:0.5rem;height:0.5rem;border-radius:50%;background:var(--primary);display:inline-block;animation:pulse-glow 1.5s ease-in-out infinite;"></span>
             <span style="font-family:var(--font-heading);font-weight:600;font-size:0.8125rem;color:var(--primary);letter-spacing:0.06em;">EXCITING FEATURES AHEAD</span>
         </div>
@@ -164,7 +164,7 @@
         <div class="progress-bar-wrap">
             <div class="progress-bar-fill"></div>
         </div>
-        <p style="font-size:0.8125rem;color:var(--text-muted);margin-bottom:0.25rem;font-family:var(--font-heading);font-weight:600;">72% Complete</p>
+        <p style="font-size:0.8125rem;color:var(--text-muted);margin-bottom:0.25rem;font-family:var(--font-heading);font-weight:500;">72% Complete</p>
 
         <!-- Countdown Timer -->
         <div class="countdown-grid" id="countdown">
@@ -190,8 +190,8 @@
         </div>
 
         <!-- Notify Form -->
-        <p style="font-family:var(--font-heading);font-weight:600;font-size:0.9rem;color:var(--text-heading);margin-bottom:1rem;">Get notified when we launch:</p>
-        <form class="notify-form" onsubmit="event.preventDefault(); alert('🎉 You\'re on the list! We\'ll notify you as soon as we launch.'); this.reset();">
+        <p style="font-family:var(--font-heading);font-weight:500;font-size:0.9rem;color:var(--text-heading);margin-bottom:1rem;">Get notified when we launch:</p>
+        <form class="notify-form" onsubmit="event.preventDefault(); alert('You\'re on the list! We\'ll notify you as soon as we launch.'); this.reset();">
             <input type="email" class="form-input" placeholder="your@email.com" required style="flex:1;">
             <button type="submit" class="btn btn-primary">Notify Me</button>
         </form>

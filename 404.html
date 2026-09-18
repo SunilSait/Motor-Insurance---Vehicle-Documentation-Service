@@ -20,14 +20,15 @@
         }
         .gear-bg {
             position: absolute;
-            top: 50%;
+            top: 28%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            opacity: 0.04;
-            animation: spin-slow 20s linear infinite;
+            width: 360px;
+            height: 360px;
+            opacity: 0.08;
+            animation: spin-slow 35s linear infinite;
             pointer-events: none;
+            z-index: 0;
         }
     </style>
 </head>
@@ -56,37 +57,49 @@
 
 <!-- Content -->
 <div class="fullscreen-content">
-    <div style="position:relative;max-width:560px;width:100%;margin:0 auto;">
-        <!-- Background gear decoration -->
-        <svg class="gear-bg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 5 L55 15 Q60 14 65 16 L73 8 L82 17 L74 25 Q77 30 77 35 L88 38 L88 52 L77 55 Q77 60 74 65 L82 73 L73 82 L65 74 Q60 76 55 75 L52 86 L38 86 L35 75 Q30 76 25 74 L17 82 L8 73 L16 65 Q13 60 13 55 L2 52 L2 38 L13 35 Q13 30 16 25 L8 17 L17 8 L25 16 Q30 14 35 15 L50 5 Z" stroke="#1E4FD8" stroke-width="2"/>
-            <circle cx="50" cy="50" r="18" stroke="#1E4FD8" stroke-width="2"/>
+    <div style="position:relative;max-width:560px;width:100%;margin:0 auto;z-index:1;">
+        <!-- Background vehicle wheel decoration -->
+        <svg class="gear-bg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="92" stroke="var(--primary)" stroke-width="3" stroke-dasharray="8 4"/>
+            <circle cx="100" cy="100" r="82" stroke="var(--primary)" stroke-width="2"/>
+            <circle cx="100" cy="100" r="72" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <line x1="100" y1="28" x2="100" y2="172" stroke="var(--primary)" stroke-width="2"/>
+            <line x1="28" y1="100" x2="172" y2="100" stroke="var(--primary)" stroke-width="2"/>
+            <line x1="49" y1="49" x2="151" y2="151" stroke="var(--primary)" stroke-width="1.5"/>
+            <line x1="151" y1="49" x2="49" y2="151" stroke="var(--primary)" stroke-width="1.5"/>
+            <circle cx="100" cy="100" r="28" stroke="var(--primary)" stroke-width="2" fill="none"/>
+            <circle cx="100" cy="100" r="14" stroke="var(--primary)" stroke-width="2"/>
+            <circle cx="100" cy="100" r="5" fill="var(--primary)"/>
+            <circle cx="100" cy="81" r="2.5" fill="var(--primary)"/>
+            <circle cx="100" cy="119" r="2.5" fill="var(--primary)"/>
+            <circle cx="81" cy="100" r="2.5" fill="var(--primary)"/>
+            <circle cx="119" cy="100" r="2.5" fill="var(--primary)"/>
         </svg>
 
         <!-- 404 Number -->
-        <div style="position:relative;display:inline-block;width:100%;text-align:center;margin-bottom:1.5rem;">
-            <div class="error-code">404</div>
+        <div style="position:relative;display:inline-block;width:100%;text-align:center;margin-bottom:1.5rem;z-index:2;outline:none;border:none;">
+            <div class="error-code" style="outline:none;border:none;">404</div>
         </div>
 
         <!-- Shield icon -->
-        <svg class="shield-spin" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1.5rem;">
-            <path d="M32 4 L56 14 L56 32 C56 46 45 56 32 60 C19 56 8 46 8 32 L8 14 Z" fill="rgba(30,79,216,0.1)" stroke="#1E4FD8" stroke-width="2"/>
-            <path d="M22 32 L29 39 L42 26" stroke="#1E4FD8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg class="shield-spin" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1.5rem;position:relative;z-index:2;">
+            <path d="M32 4 L56 14 L56 32 C56 46 45 56 32 60 C19 56 8 46 8 32 L8 14 Z" fill="rgba(217, 119, 6,0.1)" stroke="#D97706" stroke-width="2"/>
+            <path d="M22 32 L29 39 L42 26" stroke="#D97706" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             <line x1="32" y1="20" x2="32" y2="20" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
             <path d="M27 20 L37 20 M32 15 L32 26" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
 
-        <div class="error-subtitle">Page Not Found</div>
-        <p class="error-desc">The road you're on leads nowhere. This page has been moved, deleted, or never existed. Let's get you back on track.</p>
+        <div class="error-subtitle" style="position:relative;z-index:2;">Page Not Found</div>
+        <p class="error-desc" style="position:relative;z-index:2;">The road you're on leads nowhere. This page has been moved, deleted, or never existed. Let's get you back on track.</p>
 
-        <div style="display:flex;gap:0.875rem;justify-content:center;flex-wrap:wrap;">
+        <div style="display:flex;gap:0.875rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;">
             <a href="index.html" class="btn btn-primary btn-lg"><i class="fas fa-home"></i> Back to Home</a>
             <a href="contact.html" class="btn btn-secondary btn-lg">Contact Support</a>
         </div>
 
         <!-- Suggestions -->
-        <div style="margin-top:3rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-2xl);">
-            <p style="font-family:var(--font-heading);font-weight:600;font-size:0.875rem;color:var(--text-heading);margin-bottom:1rem;">You might be looking for:</p>
+        <div style="margin-top:3rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-2xl);position:relative;z-index:2;">
+            <p style="font-family:var(--font-heading);font-weight:500;font-size:0.875rem;color:var(--text-heading);margin-bottom:1rem;">You might be looking for:</p>
             <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
                 <a href="services.html" class="badge badge-outline" style="padding:0.5rem 1rem;font-size:0.8125rem;border-radius:var(--radius-full);cursor:pointer;transition:var(--transition-fast);">Our Services</a>
                 <a href="documents.html" class="badge badge-outline" style="padding:0.5rem 1rem;font-size:0.8125rem;border-radius:var(--radius-full);cursor:pointer;transition:var(--transition-fast);">Documents Needed</a>

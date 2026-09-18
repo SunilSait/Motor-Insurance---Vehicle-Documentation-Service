@@ -14,7 +14,11 @@
 <div id="main-nav"></div>
 
 <!-- PAGE HEADER -->
-<div class="page-header">
+<section class="page-header hero-page" id="fees" aria-label="Fees Header">
+    <div class="page-header-bg">
+        <img src="assets/images/banner-fees.jpg" alt="VehicleSure Fees and Processing Transparency">
+    </div>
+    <div class="page-header-overlay"></div>
     <div class="container">
         <div class="breadcrumb">
             <a href="index.html">Home</a>
@@ -24,7 +28,7 @@
         <h1>Fees & Processing Time</h1>
         <p>Transparent, upfront pricing with no hidden charges. Know exactly what you'll pay before you start.</p>
     </div>
-</div>
+</section>
 
 <!-- PROCESSING TIME CARDS -->
 <section class="section">
@@ -294,14 +298,14 @@
 </section>
 
 <!-- EXPRESS UPSELL -->
-<section class="section section-alt">
+<section class="section section-alt" id="express-service">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
-            <div class="animate-on-scroll">
+        <div class="split-layout-2col express-split-layout">
+            <div class="animate-on-scroll express-upsell-content">
                 <div class="section-label">Express Service</div>
                 <h2 style="margin-bottom:1rem;">Need It Faster? Choose Express Processing</h2>
                 <p style="margin-bottom:1.5rem;">For urgent requirements — sale deadline, court proceedings, or commercial operations — our Express service prioritizes your application above all standard ones.</p>
-                <div style="display:flex;flex-direction:column;gap:0.875rem;margin-bottom:2rem;">
+                <div class="express-benefit-list">
                     <div style="display:flex;align-items:center;gap:0.875rem;padding:1rem;background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-xl);">
                         <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;"><i class="fas fa-bolt"></i></div>
                         <div>
@@ -324,13 +328,15 @@
                         </div>
                     </div>
                 </div>
-                <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-bolt"></i> Request Express Service</a>
+                <div class="express-btn-wrap">
+                    <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-bolt"></i> Request Express Service</a>
+                </div>
             </div>
-            <div class="animate-on-scroll">
-                <div style="background:linear-gradient(135deg,var(--secondary),#1A2D5A);border-radius:var(--radius-2xl);padding:2.5rem;color:#fff;text-align:center;">
-                    <div style="font-size:3rem;margin-bottom:1.25rem;">⚡</div>
+            <div class="animate-on-scroll express-surcharge-card-wrap">
+                <div style="background:linear-gradient(135deg,var(--secondary),var(--secondary-hover));border-radius:var(--radius-2xl);padding:2.5rem;color:#fff;text-align:center;">
+                    <div style="width:4rem;height:4rem;border-radius:var(--radius-xl);background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:1.75rem;color:#fff;"><i class="fas fa-bolt"></i></div>
                     <h3 style="color:#fff;margin-bottom:1rem;">Express Surcharge</h3>
-                    <div style="font-family:var(--font-heading);font-weight:700;font-size:2.5rem;color:#fff;margin-bottom:0.5rem;">+ ₹500</div>
+                    <div style="font-family:var(--font-heading);font-weight:600;font-size:2.5rem;color:#fff;margin-bottom:0.5rem;">+ ₹500</div>
                     <p style="color:rgba(255,255,255,0.65);margin-bottom:2rem;">Additional charge on top of standard service fee for priority processing.</p>
                     <div style="display:flex;flex-direction:column;gap:0.625rem;text-align:left;">
                         <div style="display:flex;align-items:center;gap:0.625rem;color:rgba(255,255,255,0.8);font-size:0.9rem;">
@@ -362,21 +368,21 @@
         </div>
         <div class="grid grid-3 animate-on-scroll">
             <div class="card" style="text-align:center;">
-                <div style="font-size:2.5rem;margin-bottom:1rem;">🏠</div>
+                <div style="width:3.5rem;height:3.5rem;border-radius:50%;background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.375rem;margin:0 auto 1.25rem;"><i class="fas fa-home"></i></div>
                 <h4 style="margin-bottom:0.5rem;">Pickup Only</h4>
-                <div style="font-family:var(--font-heading);font-weight:700;font-size:1.75rem;color:var(--primary);margin-bottom:0.5rem;">₹ 99</div>
+                <div style="font-family:var(--font-heading);font-weight:600;font-size:1.75rem;color:var(--primary);margin-bottom:0.5rem;">₹ 99</div>
                 <p style="font-size:0.875rem;color:var(--text-muted);">We collect documents from your location within the city.</p>
             </div>
             <div class="card" style="text-align:center;border-color:var(--primary);box-shadow:var(--shadow-glow);">
-                <div style="font-size:2.5rem;margin-bottom:1rem;">🔄</div>
+                <div style="width:3.5rem;height:3.5rem;border-radius:50%;background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.375rem;margin:0 auto 1.25rem;"><i class="fas fa-sync-alt"></i></div>
                 <h4 style="margin-bottom:0.5rem;">Pickup + Delivery</h4>
-                <div style="font-family:var(--font-heading);font-weight:700;font-size:1.75rem;color:var(--primary);margin-bottom:0.5rem;">₹ 199</div>
+                <div style="font-family:var(--font-heading);font-weight:600;font-size:1.75rem;color:var(--primary);margin-bottom:0.5rem;">₹ 199</div>
                 <p style="font-size:0.875rem;color:var(--text-muted);">We pick up and deliver final documents back to your address.</p>
             </div>
             <div class="card" style="text-align:center;">
-                <div style="font-size:2.5rem;margin-bottom:1rem;">🚀</div>
+                <div style="width:3.5rem;height:3.5rem;border-radius:50%;background:var(--primary-subtle);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.375rem;margin:0 auto 1.25rem;"><i class="fas fa-rocket"></i></div>
                 <h4 style="margin-bottom:0.5rem;">Same-Day Delivery</h4>
-                <div style="font-family:var(--font-heading);font-weight:700;font-size:1.75rem;color:var(--primary);margin-bottom:0.5rem;">₹ 349</div>
+                <div style="font-family:var(--font-heading);font-weight:600;font-size:1.75rem;color:var(--primary);margin-bottom:0.5rem;">₹ 349</div>
                 <p style="font-size:0.875rem;color:var(--text-muted);">Same-day document delivery for Express service clients.</p>
             </div>
         </div>
@@ -386,12 +392,17 @@
 <!-- CTA -->
 <section class="section-sm">
     <div class="container">
-        <div class="cta-banner animate-on-scroll">
-            <h2>Get a Free Quote Today</h2>
-            <p>Contact us to know the exact fee for your specific vehicle and service requirement. No commitment required.</p>
-            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-                <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Get Free Quote</a>
-                <a href="documents.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.3);color:#fff;">Check Documents</a>
+        <div class="cta-banner cta-banner-split animate-on-scroll">
+            <div class="cta-banner-content">
+                <h2>Get a Free Quote Today</h2>
+                <p>Contact us to know the exact fee for your specific vehicle and service requirement. No commitment required.</p>
+                <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                    <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Get Free Quote</a>
+                    <a href="documents.html" class="btn btn-outline-light btn-lg">Check Documents</a>
+                </div>
+            </div>
+            <div class="cta-banner-img-wrap">
+                <img src="assets/images/fees-quote-cta.jpg" alt="Friendly vehicle insurance fee quote specialist" loading="lazy">
             </div>
         </div>
     </div>

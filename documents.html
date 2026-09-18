@@ -14,7 +14,11 @@
 <div id="main-nav"></div>
 
 <!-- PAGE HEADER -->
-<div class="page-header">
+<section class="page-header hero-page" id="documents" aria-label="Documents Header">
+    <div class="page-header-bg">
+        <img src="assets/images/banner-documents.jpg" alt="VehicleSure Required Documents Guide">
+    </div>
+    <div class="page-header-overlay"></div>
     <div class="container">
         <div class="breadcrumb">
             <a href="index.html">Home</a>
@@ -24,14 +28,14 @@
         <h1>Documents Required</h1>
         <p>Know exactly what documents you need before visiting us. Download our complete checklists for two-wheelers and four-wheelers.</p>
     </div>
-</div>
+</section>
 
 <!-- TABS -->
 <section class="section">
     <div class="container">
         <div class="tab-nav animate-on-scroll">
-            <button class="tab-btn active" data-tab="docs-2w" data-group="docs" onclick="switchTab('docs-2w','docs')">🏍️ Two-Wheeler Documents</button>
-            <button class="tab-btn" data-tab="docs-4w" data-group="docs" onclick="switchTab('docs-4w','docs')">🚗 Four-Wheeler Documents</button>
+            <button class="tab-btn active" data-tab="docs-2w" data-group="docs" onclick="switchTab('docs-2w','docs')"><i class="fas fa-motorcycle"></i> Two-Wheeler Documents</button>
+            <button class="tab-btn" data-tab="docs-4w" data-group="docs" onclick="switchTab('docs-4w','docs')"><i class="fas fa-car"></i> Four-Wheeler Documents</button>
         </div>
 
         <!-- TWO-WHEELER -->
@@ -42,15 +46,20 @@
                         <div class="doc-icon"><i class="fas fa-file-shield"></i></div>
                         <div>
                             <h4 style="margin-bottom:0.25rem;">Insurance Renewal</h4>
-                            <span class="badge badge-amber">2-Wheeler</span>
+                            <span class="badge" style="background:var(--primary);">2-Wheeler</span>
                         </div>
                     </div>
                     <div class="doc-list">
                         <div class="doc-list-item"><i class="fas fa-check"></i> Original RC Book / Smart Card</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Previous Insurance Policy Copy</div>
-                        <div class="doc-list-item"><i class="fas fa-check"></i> Aadhar Card (owner)</div>
-                        <div class="doc-list-item"><i class="fas fa-check"></i> Mobile Number (for OTP)</div>
+                        <div class="doc-list-item"><i class="fas fa-check"></i> Aadhar Card (Owner ID Proof)</div>
+                        <div class="doc-list-item"><i class="fas fa-check"></i> PAN Card (for high IDV vehicles)</div>
+                        <div class="doc-list-item"><i class="fas fa-check"></i> Mobile Number (linked for OTP verification)</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Odometer Reading Photo</div>
+                        <div class="doc-list-item"><i class="fas fa-check"></i> Vehicle Chassis & Engine Photo</div>
+                    </div>
+                    <div style="background:rgba(217,119,6,0.06);border:1px solid rgba(217,119,6,0.2);border-radius:var(--radius-lg);padding:0.875rem;margin-bottom:1.25rem;">
+                        <p style="font-size:0.8125rem;color:var(--text-body);margin:0;"><i class="fas fa-shield-check" style="color:var(--primary);margin-right:0.5rem;"></i> Zero inspection needed if renewed before policy lapse date.</p>
                     </div>
                     <button class="btn btn-secondary w-full" onclick="alert('Checklist downloaded!')">
                         <i class="fas fa-download"></i> Download Checklist
@@ -61,7 +70,7 @@
                         <div class="doc-icon"><i class="fas fa-file-alt"></i></div>
                         <div>
                             <h4 style="margin-bottom:0.25rem;">RC Transfer</h4>
-                            <span class="badge badge-amber">2-Wheeler</span>
+                            <span class="badge" style="background:var(--primary);">2-Wheeler</span>
                         </div>
                     </div>
                     <div class="doc-list">
@@ -75,6 +84,9 @@
                         <div class="doc-list-item"><i class="fas fa-check"></i> NOC from Bank (if under loan)</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Passport Size Photo (buyer – 2)</div>
                     </div>
+                    <div style="background:rgba(217,119,6,0.06);border:1px solid rgba(217,119,6,0.2);border-radius:var(--radius-lg);padding:0.875rem;margin-bottom:1.25rem;">
+                        <p style="font-size:0.8125rem;color:var(--text-body);margin:0;"><i class="fas fa-file-signature" style="color:var(--primary);margin-right:0.5rem;"></i> Both buyer and seller signatures are required on Forms 29 & 30.</p>
+                    </div>
                     <button class="btn btn-secondary w-full" onclick="alert('Checklist downloaded!')">
                         <i class="fas fa-download"></i> Download Checklist
                     </button>
@@ -84,13 +96,15 @@
                         <div class="doc-icon"><i class="fas fa-wind"></i></div>
                         <div>
                             <h4 style="margin-bottom:0.25rem;">PUC Certificate</h4>
-                            <span class="badge badge-amber">2-Wheeler</span>
+                            <span class="badge" style="background:var(--primary);">2-Wheeler</span>
                         </div>
                     </div>
                     <div class="doc-list">
                         <div class="doc-list-item"><i class="fas fa-check"></i> RC Book or Registration Number</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Vehicle Present for Emission Test</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Previous PUC (if available)</div>
+                        <div class="doc-list-item"><i class="fas fa-check"></i> Chassis & Engine Number Verification</div>
+                        <div class="doc-list-item"><i class="fas fa-check"></i> Fuel & Engine Condition Check</div>
                     </div>
                     <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:var(--radius-lg);padding:0.875rem;margin-bottom:1.25rem;">
                         <p style="font-size:0.8125rem;color:var(--text-body);margin:0;"><i class="fas fa-info-circle" style="color:#10B981;margin-right:0.5rem;"></i> The vehicle must be physically present at the test center for emission measurement.</p>
@@ -120,6 +134,10 @@
                         <div class="doc-list-item"><i class="fas fa-check"></i> PAN Card (if value > ₹1 lakh)</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Odometer Reading</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Vehicle Photos (if lapsed)</div>
+                        <div class="doc-list-item"><i class="fas fa-check"></i> Claim History & NCB Certificate</div>
+                    </div>
+                    <div style="background:rgba(217,119,6,0.06);border:1px solid rgba(217,119,6,0.2);border-radius:var(--radius-lg);padding:0.875rem;margin-bottom:1.25rem;">
+                        <p style="font-size:0.8125rem;color:var(--text-body);margin:0;"><i class="fas fa-shield-check" style="color:var(--primary);margin-right:0.5rem;"></i> Zero-depreciation and roadside assistance add-ons available.</p>
                     </div>
                     <button class="btn btn-secondary w-full" onclick="alert('Checklist downloaded!')">
                         <i class="fas fa-download"></i> Download Checklist
@@ -144,6 +162,9 @@
                         <div class="doc-list-item"><i class="fas fa-check"></i> NOC from Bank (if applicable)</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Sale Agreement / Invoice</div>
                         <div class="doc-list-item"><i class="fas fa-check"></i> Passport Photos (2 copies)</div>
+                    </div>
+                    <div style="background:rgba(217,119,6,0.06);border:1px solid rgba(217,119,6,0.2);border-radius:var(--radius-lg);padding:0.875rem;margin-bottom:1.25rem;">
+                        <p style="font-size:0.8125rem;color:var(--text-body);margin:0;"><i class="fas fa-file-signature" style="color:var(--primary);margin-right:0.5rem;"></i> Form 29 & 30 must be signed by both registered owner and buyer.</p>
                     </div>
                     <button class="btn btn-secondary w-full" onclick="alert('Checklist downloaded!')">
                         <i class="fas fa-download"></i> Download Checklist
@@ -214,12 +235,20 @@
 
 <!-- CTA -->
 <section class="section">
-    <div class="container" style="text-align:center;" class="animate-on-scroll">
-        <h2 style="margin-bottom:1rem;">Not Sure Which Documents You Need?</h2>
-        <p style="max-width:520px;margin:0 auto 2rem;color:var(--text-muted);">Our team will guide you through the complete document checklist over a quick phone call — free of charge.</p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-            <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-phone-alt"></i> Call Our Experts</a>
-            <a href="services.html" class="btn btn-secondary btn-lg">View Services</a>
+    <div class="container">
+        <div class="cta-split-section animate-on-scroll">
+            <div class="cta-img-wrap">
+                <img src="assets/images/documents-expert-cta.jpg" alt="Automotive vehicle documentation checklist specialist" loading="lazy">
+            </div>
+            <div>
+                <div class="section-label" style="margin-left:0;margin-bottom:0.75rem;">Expert Guidance</div>
+                <h2 style="margin-bottom:1rem;">Not Sure Which Documents You Need?</h2>
+                <p style="margin-bottom:2rem;color:var(--text-muted);">Our team will guide you through the complete document checklist over a quick phone call — completely free of charge.</p>
+                <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                    <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-phone"></i> Call Our Experts</a>
+                    <a href="services.html" class="btn btn-secondary btn-lg">View Services</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

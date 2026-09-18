@@ -15,14 +15,25 @@
 <div id="main-nav"></div>
 
 <!-- ========== HERO SECTION (Split Layout) ========== -->
-<section class="hero-split" style="background:var(--bg-body);margin-top:-4rem;padding-top:4rem;">
-    <div class="hero-split-text animate-on-scroll" style="padding:8rem 3rem 5rem 0;max-width:600px;margin-left:auto;">
-        <div class="section-label" style="margin-left:0;">
+<section class="hero-split">
+    <!-- Dynamic High-Tech Ambient Background System -->
+    <div class="hero-bg-grid"></div>
+    <div class="hero-aurora-mesh">
+        <div class="hero-aurora-1"></div>
+        <div class="hero-aurora-2"></div>
+        <div class="hero-aurora-3"></div>
+    </div>
+    <div class="hero-shimmer-ray"></div>
+    <div class="hero-tech-ring hero-tech-ring-1"></div>
+    <div class="hero-tech-ring hero-tech-ring-2"></div>
+
+    <div class="hero-split-text animate-on-scroll">
+        <div class="section-label">
             <i class="fas fa-shield-alt"></i> Trusted Vehicle Services
         </div>
         <h1 style="margin-bottom:1.25rem;line-height:1.15;">
             Protect Your Vehicle,<br>
-            <span style="color:var(--primary);">Simplify Your Docs</span>
+            <span class="hero-title-gradient">Simplify Your Docs</span>
         </h1>
         <p style="font-size:1.0625rem;margin-bottom:2rem;max-width:500px;font-weight:450;">
             Complete motor insurance and vehicle documentation assistance for two-wheelers and four-wheelers. From renewal to RC transfer — we handle it all, so you don't have to.
@@ -38,7 +49,7 @@
                 <i class="fas fa-check-circle"></i> 48hr Processing
             </div>
         </div>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <div class="hero-cta-btns" style="display:flex;gap:1rem;flex-wrap:wrap;">
             <a href="contact.html" class="btn btn-primary btn-lg">
                 <i class="fas fa-calendar-check"></i> Book Appointment
             </a>
@@ -47,17 +58,75 @@
             </a>
         </div>
     </div>
-    <div class="hero-split-visual" style="min-height:600px;">
-        <img src="assets/images/hero-home.jpg" alt="Motor insurance and vehicle documentation - car and motorcycle with shield protection" loading="eager" style="width:100%;height:100%;object-fit:cover;">
-        <!-- Floating stats card -->
-        <div style="position:absolute;bottom:3rem;left:2rem;z-index:3;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border:1px solid rgba(30,79,216,0.12);border-radius:var(--radius-xl);padding:1.25rem 1.5rem;box-shadow:var(--shadow-lg);min-width:200px;">
-            <div style="display:flex;align-items:center;gap:0.75rem;">
-                <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.875rem;"><i class="fas fa-users"></i></div>
-                <div>
-                    <div style="font-family:var(--font-heading);font-weight:700;font-size:1.375rem;color:#0A1628;line-height:1;" data-count="12000" data-suffix="+">12000+</div>
-                    <div style="font-size:0.75rem;color:#8896A6;font-weight:500;">Happy Customers</div>
+    <div class="hero-split-visual hero-collage-wrapper animate-on-scroll">
+        <div class="hero-collage-slider" id="hero-collage-slider">
+            <!-- Collage Slide 1: 4-Wheelers, 2-Wheelers, Documentation Handover -->
+            <div class="hero-collage-slide active">
+                <div class="hero-collage-grid">
+                    <!-- Top Left: 4-Wheeler Luxury SUV -->
+                    <div class="hero-collage-item hero-collage-top-left">
+                        <img src="assets/images/hero-car.jpg" alt="Four-wheeler and car documentation service" loading="eager">
+                        <div class="hero-collage-overlay">
+                            <span class="hero-collage-tag"><span class="tag-pulse-dot"></span> 4-Wheelers</span>
+                        </div>
+                    </div>
+                    <!-- Top Right: 2-Wheeler Motorcycle -->
+                    <div class="hero-collage-item hero-collage-top-right">
+                        <img src="assets/images/hero-bike.jpg" alt="Two-wheeler motorcycle insurance service" loading="eager">
+                        <div class="hero-collage-overlay">
+                            <span class="hero-collage-tag"><span class="tag-pulse-dot"></span> 2-Wheelers</span>
+                        </div>
+                    </div>
+                    <!-- Bottom: Official Documentation Handover -->
+                    <div class="hero-collage-item hero-collage-bottom">
+                        <img src="assets/images/hero-handover.jpg" alt="Vehicle documentation and instant policy delivery" loading="eager">
+                        <div class="hero-collage-overlay">
+                            <span class="hero-collage-tag"><span class="tag-pulse-dot"></span> Instant RC & Insurance Delivery</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Collage Slide 2: Fleet & EV Coverage, Urban Bikes & Scooters, Certified Smart Card Handover -->
+            <div class="hero-collage-slide">
+                <div class="hero-collage-grid">
+                    <!-- Top Left: Commercial & Fleet EV Diagnostics -->
+                    <div class="hero-collage-item hero-collage-top-left">
+                        <img src="assets/images/hero-car-2.jpg" alt="Fleet and electric vehicle insurance documentation" loading="lazy">
+                        <div class="hero-collage-overlay">
+                            <span class="hero-collage-tag"><span class="tag-pulse-dot"></span> Fleet & EV Services</span>
+                        </div>
+                    </div>
+                    <!-- Top Right: Urban Motorcycle & Scooter Studio -->
+                    <div class="hero-collage-item hero-collage-top-right">
+                        <img src="assets/images/hero-bike-2.jpg" alt="Urban motorcycle and scooter insurance documentation" loading="lazy">
+                        <div class="hero-collage-overlay">
+                            <span class="hero-collage-tag"><span class="tag-pulse-dot"></span> Premium Bikes</span>
+                        </div>
+                    </div>
+                    <!-- Bottom: Official RTO Smart Card Handover -->
+                    <div class="hero-collage-item hero-collage-bottom">
+                        <img src="assets/images/hero-handover-2.jpg" alt="Verified RTO smart card and insurance certificate handover" loading="lazy">
+                        <div class="hero-collage-overlay">
+                            <span class="hero-collage-tag"><span class="tag-pulse-dot"></span> Doorstep & Lounge Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collage Controls: Prev Button, Dots, Next Button -->
+        <div class="hero-collage-controls">
+            <button class="hero-collage-nav-btn hero-collage-prev" onclick="prevCollageSlide()" aria-label="Previous Collage Slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="hero-collage-dots" id="hero-collage-dots">
+                <button class="hero-collage-dot active" onclick="goToCollageSlide(0)" aria-label="Collage 1"></button>
+                <button class="hero-collage-dot" onclick="goToCollageSlide(1)" aria-label="Collage 2"></button>
+            </div>
+            <button class="hero-collage-nav-btn hero-collage-next" onclick="nextCollageSlideManual()" aria-label="Next Collage Slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </div>
 </section>
@@ -95,45 +164,60 @@
             <p>Everything your two-wheeler and four-wheeler needs — handled by certified experts with end-to-end support.</p>
         </div>
         <div class="grid grid-4">
-            <div class="service-card animate-on-scroll">
-                <div class="service-icon">
-                    <i class="fas fa-file-shield"></i>
+            <div class="service-card service-card-visual animate-on-scroll">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/service-card-insurance.jpg" alt="Motor Insurance Renewal Service" class="service-card-img" loading="lazy">
+                    <div class="service-card-overlay"></div>
                 </div>
-                <h4>Insurance Renewal</h4>
-                <p>Hassle-free motor insurance renewal for bikes and cars. Compare plans, get the best premium, and stay covered.</p>
-                <a href="services.html#insurance" style="display:inline-flex;align-items:center;gap:0.375rem;color:var(--primary);font-family:var(--font-heading);font-weight:600;font-size:0.875rem;margin-top:1rem;">
-                    Learn More <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
-                </a>
+                <div class="service-card-body">
+                    <h4>Insurance Renewal</h4>
+                    <p>Hassle-free motor insurance renewal for bikes and cars. Compare plans, get the best premium, and stay covered.</p>
+                    <a href="services.html#insurance" class="service-card-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <div class="service-card animate-on-scroll">
-                <div class="service-icon">
-                    <i class="fas fa-file-alt"></i>
+
+            <div class="service-card service-card-visual animate-on-scroll">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/service-card-rc.jpg" alt="Vehicle RC Ownership Transfer Service" class="service-card-img" loading="lazy">
+                    <div class="service-card-overlay"></div>
                 </div>
-                <h4>RC Transfer</h4>
-                <p>Seamless RC ownership transfer assistance. We guide you through RTO formalities and document submission.</p>
-                <a href="services.html#rc" style="display:inline-flex;align-items:center;gap:0.375rem;color:var(--primary);font-family:var(--font-heading);font-weight:600;font-size:0.875rem;margin-top:1rem;">
-                    Learn More <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
-                </a>
+                <div class="service-card-body">
+                    <h4>RC Transfer</h4>
+                    <p>Seamless RC ownership transfer assistance. We guide you through RTO formalities and document submission.</p>
+                    <a href="services.html#rc" class="service-card-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <div class="service-card animate-on-scroll">
-                <div class="service-icon">
-                    <i class="fas fa-clipboard-check"></i>
+
+            <div class="service-card service-card-visual animate-on-scroll">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/service-card-fitness.jpg" alt="Vehicle Fitness Inspection & Certificate" class="service-card-img" loading="lazy">
+                    <div class="service-card-overlay"></div>
                 </div>
-                <h4>Fitness Certificate</h4>
-                <p>Vehicle fitness inspection and certificate procurement. Mandatory for commercial and older personal vehicles.</p>
-                <a href="services.html#fitness" style="display:inline-flex;align-items:center;gap:0.375rem;color:var(--primary);font-family:var(--font-heading);font-weight:600;font-size:0.875rem;margin-top:1rem;">
-                    Learn More <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
-                </a>
+                <div class="service-card-body">
+                    <h4>Fitness Certificate</h4>
+                    <p>Vehicle fitness inspection and certificate procurement. Mandatory for commercial and older personal vehicles.</p>
+                    <a href="services.html#fitness" class="service-card-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <div class="service-card animate-on-scroll">
-                <div class="service-icon">
-                    <i class="fas fa-wind"></i>
+
+            <div class="service-card service-card-visual animate-on-scroll">
+                <div class="service-card-img-wrap">
+                    <img src="assets/images/service-card-puc.jpg" alt="Pollution Under Control (PUC) Assistance" class="service-card-img" loading="lazy">
+                    <div class="service-card-overlay"></div>
                 </div>
-                <h4>PUC Assistance</h4>
-                <p>Pollution Under Control certificate assistance. We help you get your PUC quickly and avoid traffic penalties.</p>
-                <a href="services.html#puc" style="display:inline-flex;align-items:center;gap:0.375rem;color:var(--primary);font-family:var(--font-heading);font-weight:600;font-size:0.875rem;margin-top:1rem;">
-                    Learn More <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
-                </a>
+                <div class="service-card-body">
+                    <h4>PUC Assistance</h4>
+                    <p>Pollution Under Control certificate assistance. We help you get your PUC quickly and avoid traffic penalties.</p>
+                    <a href="services.html#puc" class="service-card-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -156,7 +240,7 @@
             <div class="process-step">
                 <div class="process-step-num">2</div>
                 <h4>We Handle Processing</h4>
-                <p>Our experts collect your documents, liaise with RTO / insurance providers, and process everything on your behalf.</p>
+                <p>Our experts collect your documents with RTO / providers, and process everything on your behalf.</p>
             </div>
             <div class="process-step">
                 <div class="process-step-num">3</div>
@@ -170,14 +254,14 @@
 <!-- ========== WHY CHOOSE US ========== -->
 <section class="section">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+        <div class="split-layout-2col">
             <div class="animate-on-scroll">
-                <div style="border-radius:var(--radius-3xl);overflow:hidden;height:480px;background:linear-gradient(135deg,var(--primary-light),var(--bg-surface));position:relative;">
-                    <img src="assets/images/hero-home2.jpg" alt="Professional vehicle insurance service agent" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-3xl);">
+                <div class="why-us-visual">
+                    <img src="assets/images/hero-home2.jpg" alt="Professional vehicle insurance service agent" class="why-us-img">
                     <!-- Floating badge -->
-                    <div style="position:absolute;top:2rem;right:-1rem;background:var(--primary);color:#fff;border-radius:var(--radius-xl);padding:1rem 1.25rem;box-shadow:0 8px 32px rgba(30,79,216,0.35);min-width:140px;text-align:center;">
-                        <div style="font-family:var(--font-heading);font-weight:700;font-size:1.5rem;line-height:1;">98%</div>
-                        <div style="font-size:0.75rem;opacity:0.85;font-weight:500;margin-top:0.25rem;">Success Rate</div>
+                    <div class="why-us-badge">
+                        <div class="why-us-badge-val">98%</div>
+                        <div class="why-us-badge-lbl">Success Rate</div>
                     </div>
                 </div>
             </div>
@@ -207,20 +291,6 @@
                             <p>We come to you. No RTO queues, no multiple visits, no wasted time.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-check"><i class="fas fa-check"></i></div>
-                        <div class="feature-item-text">
-                            <h5>Real-Time Status Updates</h5>
-                            <p>Track your application status through WhatsApp and email at every stage.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-check"><i class="fas fa-check"></i></div>
-                        <div class="feature-item-text">
-                            <h5>Covers Both 2-Wheelers & 4-Wheelers</h5>
-                            <p>Bikes, scooters, cars, SUVs — all vehicle types across all major brands.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -235,31 +305,31 @@
             <h2>Services for Every Vehicle Type</h2>
             <p>Whether you ride a two-wheeler or drive a four-wheeler, we've got specialized service packages for your vehicle.</p>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;" class="animate-on-scroll">
+        <div class="grid grid-2 animate-on-scroll">
             <!-- Two-wheeler -->
-            <div style="background:var(--bg-card);border:2px solid var(--border-light);border-radius:var(--radius-2xl);padding:2.5rem;transition:var(--transition-premium);" class="vehicle-card">
-                <div style="font-size:3rem;margin-bottom:1.25rem;">🏍️</div>
-                <h3 style="margin-bottom:0.75rem;color:var(--primary);">Two-Wheelers</h3>
-                <p style="margin-bottom:1.5rem;color:var(--text-muted);">Bikes, scooters, mopeds, and all two-wheeled motorized vehicles.</p>
-                <ul style="display:flex;flex-direction:column;gap:0.625rem;">
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> Third-Party & Comprehensive Insurance</li>
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> RC Transfer (Private & Commercial)</li>
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> PUC Certificate</li>
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> Fitness Certificate (Commercial)</li>
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> NOC & Duplicate RC</li>
+            <div class="vehicle-card active">
+                <div class="vehicle-card-icon"><i class="fas fa-motorcycle"></i></div>
+                <h3>Two-Wheelers</h3>
+                <p class="vehicle-card-desc">Bikes, scooters, mopeds, and superbikes — express renewals and RTO documentation.</p>
+                <ul class="vehicle-card-features">
+                    <li><i class="fas fa-check-circle"></i> <span>Instant 1-Yr & 5-Yr Bike Insurance (Own Damage + TP)</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Private Scooter & Bike RC Ownership Transfer</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Same-Day PUC Emission Test with Online Parivahan Sync</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Hypothecation Removal (HP Cancel) after Loan Closure</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Lost or Damaged RC Smart Card Duplicate Issuance</span></li>
                 </ul>
             </div>
             <!-- Four-wheeler -->
-            <div style="background:var(--bg-card);border:2px solid var(--primary);border-radius:var(--radius-2xl);padding:2.5rem;box-shadow:0 8px 32px rgba(30,79,216,0.12);transition:var(--transition-premium);" class="vehicle-card active">
-                <div style="font-size:3rem;margin-bottom:1.25rem;">🚗</div>
-                <h3 style="margin-bottom:0.75rem;color:var(--primary);">Four-Wheelers</h3>
-                <p style="margin-bottom:1.5rem;color:var(--text-muted);">Cars, SUVs, trucks, vans, taxis, and all four-wheeled vehicles.</p>
-                <ul style="display:flex;flex-direction:column;gap:0.625rem;">
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> Third-Party & Comprehensive Insurance</li>
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> RC Transfer & Mutation</li>
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> PUC Certificate</li>
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> Fitness Certificate (Annual)</li>
-                    <li style="display:flex;align-items:center;gap:0.625rem;font-size:0.9375rem;"><i class="fas fa-check" style="color:var(--green);font-size:0.75rem;"></i> Hypothecation & NOC Assistance</li>
+            <div class="vehicle-card active">
+                <div class="vehicle-card-icon"><i class="fas fa-car"></i></div>
+                <h3>Four-Wheelers</h3>
+                <p class="vehicle-card-desc">Cars, SUVs, commercial taxis, trucks, and fleets — complete compliance and insurance.</p>
+                <ul class="vehicle-card-features">
+                    <li><i class="fas fa-check-circle"></i> <span>Zero-Depreciation & Comprehensive Car Insurance Renewal</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Inter-State RC Transfer, NOC Clearance & State Tax Mutation</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Mandatory 15-Year Fitness Renewal & Commercial FC Inspection</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Commercial Taxi & National Fleet Permit Assistance</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Bank Loan HP Endorsement Removal & Fastag Services</span></li>
                 </ul>
             </div>
         </div>
@@ -321,7 +391,7 @@
 <!-- ========== FAQ ========== -->
 <section class="section section-alt">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start;">
+        <div class="faq-split-grid">
             <div class="animate-on-scroll">
                 <div class="section-label">FAQ</div>
                 <h2 style="margin-bottom:1rem;">Frequently Asked Questions</h2>
@@ -365,43 +435,67 @@
                         <div class="faq-answer-inner">Fitness certificates are mandatory for commercial vehicles and personal vehicles older than 15 years. New personal vehicles are exempt until they reach the 15-year threshold.</div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        How frequently should I renew my PUC?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">PUC certificates for petrol vehicles are valid for 6 months and for diesel vehicles are valid for 3 months. Driving without a valid PUC is a traffic violation and can result in a fine.</div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        Can I track my application status online?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Yes, once your application is submitted, we send real-time updates via WhatsApp and email at each stage. You'll know exactly where your documents are at all times.</div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== CTA BANNER ========== -->
+<!-- ========== CTA BANNER (Design 1: The Dual-Action Instant Hub) ========== -->
 <section class="section">
     <div class="container">
-        <div class="cta-banner animate-on-scroll">
-            <div class="section-label" style="color:rgba(255,255,255,0.7);justify-content:center;">Ready to Get Started?</div>
-            <h2>Don't Let Expired Documents Ground Your Vehicle</h2>
-            <p>Book an appointment today and let our experts handle all your vehicle documentation needs — fast, accurate, and stress-free.</p>
-            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-                <a href="contact.html" class="btn btn-primary btn-lg">
-                    <i class="fas fa-calendar-check"></i> Book Appointment
-                </a>
-                <a href="fees.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.3);color:#fff;">
-                    View Fees
-                </a>
+        <div class="cta-hub-home1 animate-on-scroll">
+            <div class="cta-hub-home1-glow2"></div>
+            <!-- Left Side: Content & Actions -->
+            <div style="position:relative;z-index:1;">
+                <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(217,119,6,0.2);border:1px solid rgba(217,119,6,0.35);border-radius:var(--radius-full);padding:0.35rem 0.85rem;margin-bottom:1.25rem;">
+                    <span style="width:6px;height:6px;border-radius:50%;background:#10B981;display:inline-block;box-shadow:0 0 6px #10B981;animation:pulse-glow 2s infinite;"></span>
+                    <span style="color:#FEF3C7;font-family:var(--font-heading);font-weight:700;font-size:0.75rem;letter-spacing:0.06em;">INSTANT PROCESSING AVAILABLE TODAY</span>
+                </div>
+                <h2 style="color:#FFFFFF;margin-bottom:1rem;line-height:1.2;font-size:clamp(1.75rem,3.5vw,2.5rem);">Don't Let Expired Documents Ground Your Vehicle</h2>
+                <p style="color:rgba(255,255,255,0.72);font-size:0.95rem;line-height:1.7;margin-bottom:1.25rem;">Book your appointment in seconds. Our verified RTO specialists collect, renew, and deliver your vehicle documents directly to your doorstep with guaranteed compliance.</p>
+                
+                <div class="cta-hub-trust-chips">
+                    <div class="cta-hub-chip"><i class="fas fa-check-circle"></i> Free Doorstep Pickup</div>
+                    <div class="cta-hub-chip"><i class="fas fa-check-circle"></i> 100% Genuine RTO Docs</div>
+                </div>
+
+                <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Book Appointment
+                    </a>
+                    <a href="tel:+919876543210" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone"></i> +91 98765 43210
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Live Status & Assurance Card -->
+            <div class="cta-metrics-card">
+                <div class="cta-metric-row">
+                    <div class="cta-metric-icon"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <div class="cta-metric-val">24 – 48 Hours</div>
+                        <div class="cta-metric-lbl">Average Turnaround Time</div>
+                    </div>
+                </div>
+                <div class="cta-metric-row">
+                    <div class="cta-metric-icon"><i class="fas fa-star"></i></div>
+                    <div>
+                        <div class="cta-metric-val">4.9 / 5.0 Rating</div>
+                        <div class="cta-metric-lbl">Based on 12,000+ Vehicle Owners</div>
+                    </div>
+                </div>
+                <div class="cta-metric-row">
+                    <div class="cta-metric-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div>
+                        <div class="cta-metric-val">100% Guaranteed</div>
+                        <div class="cta-metric-lbl">IRDAI Certified & Government Backed</div>
+                    </div>
+                </div>
+                <div class="cta-metrics-footer">
+                    <i class="fas fa-certificate" style="color:#10B981;"></i>
+                    <span>Govt. Approved RTO Facilitator • No Hidden Charges</span>
+                </div>
             </div>
         </div>
     </div>
@@ -411,5 +505,63 @@
 <div id="main-footer"></div>
 
 <script src="components.js"></script>
+<script>
+    let currentCollageSlide = 0;
+    let collageSlideTimer = null;
+
+    function showCollageSlide(index) {
+        const slides = document.querySelectorAll('.hero-collage-slide');
+        const dots = document.querySelectorAll('.hero-collage-dot');
+        if (!slides.length) return;
+
+        currentCollageSlide = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentCollageSlide);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentCollageSlide);
+        });
+    }
+
+    function nextCollageSlide() {
+        showCollageSlide(currentCollageSlide + 1);
+    }
+
+    function nextCollageSlideManual() {
+        clearInterval(collageSlideTimer);
+        showCollageSlide(currentCollageSlide + 1);
+        startCollageAutoSlide();
+    }
+
+    function prevCollageSlide() {
+        clearInterval(collageSlideTimer);
+        showCollageSlide(currentCollageSlide - 1);
+        startHeroAutoSlide ? null : null;
+        startCollageAutoSlide();
+    }
+
+    function goToCollageSlide(index) {
+        clearInterval(collageSlideTimer);
+        showCollageSlide(index);
+        startCollageAutoSlide();
+    }
+
+    function startCollageAutoSlide() {
+        clearInterval(collageSlideTimer);
+        collageSlideTimer = setInterval(nextCollageSlide, 4500);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        startCollageAutoSlide();
+
+        const slider = document.getElementById('hero-collage-slider');
+        if (slider) {
+            slider.addEventListener('mouseenter', () => clearInterval(collageSlideTimer));
+            slider.addEventListener('mouseleave', () => startCollageAutoSlide());
+        }
+    });
+</script>
 </body>
 </html>

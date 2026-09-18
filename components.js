@@ -93,8 +93,7 @@ function injectNav() {
                     <i class="${isDark ? 'fas fa-sun theme-icon' : 'fas fa-moon theme-icon'}"></i>
                 </button>
                 <!-- CTAs -->
-                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
-                <a href="contact.html" class="btn btn-primary btn-sm">Book Appointment</a>
+                <a href="login.html" class="btn btn-primary btn-sm">Login</a>
                 <!-- Mobile Hamburger -->
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">
                     <i class="fas fa-bars mobile-menu-icon"></i>
@@ -109,8 +108,7 @@ function injectNav() {
         <div class="mobile-menu" id="mobile-menu">
             ${mobileLinksHTML}
             <div class="mob-actions">
-                <a href="contact.html" class="btn btn-primary w-full">Book Appointment</a>
-                <a href="login.html" class="btn btn-secondary w-full">Login</a>
+                <a href="login.html" class="btn btn-primary w-full">Login</a>
             </div>
             <div class="mob-toggles">
                 <button onclick="toggleDir()" class="nav-icon-btn" title="Toggle Direction">
@@ -332,10 +330,34 @@ window.addEventListener('scroll', function() {
     }
 }, { passive: true });
 
+/* ─── SCROLL TO TOP ─────────────────────────────────────── */
+function injectScrollToTop() {
+    if (document.getElementById('scroll-to-top')) return;
+    const btn = document.createElement('button');
+    btn.id = 'scroll-to-top';
+    btn.className = 'scroll-to-top-btn';
+    btn.setAttribute('aria-label', 'Scroll to top');
+    btn.setAttribute('title', 'Scroll to top');
+    btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    btn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 280) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    }, { passive: true });
+}
+
 /* ─── INIT ON DOM READY ─────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function() {
     injectNav();
     injectFooter();
+    injectScrollToTop();
     initScrollAnimations();
     animateCounters();
 });
