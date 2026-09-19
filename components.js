@@ -332,6 +332,7 @@ window.addEventListener('scroll', function() {
 
 /* ─── SCROLL TO TOP ─────────────────────────────────────── */
 function injectScrollToTop() {
+    if (document.body.classList.contains('auth-page') || document.body.classList.contains('fullscreen-page')) return;
     if (document.getElementById('scroll-to-top')) return;
     const btn = document.createElement('button');
     btn.id = 'scroll-to-top';

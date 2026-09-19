@@ -2816,10 +2816,16 @@ input[type="tel"] {
 }
 
 .bento-inner-service-card:hover {
-    border-color: rgba(217, 119, 6, 0.35);
-    background: rgba(24, 24, 27, 0.85);
+    border-color: rgba(217, 119, 6, 0.4);
+    background: var(--bg-card);
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.bento-inner-service-card:hover .bento-inner-service-icon {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
 }
 
 .bento-inner-service-icon {
@@ -4024,12 +4030,23 @@ input[type="tel"] {
     grid-template-columns: 1.15fr 0.85fr;
     gap: 3rem;
     align-items: center;
-    text-align: left;
+    text-align: start;
     padding: 3rem 3.5rem;
 }
 
+.cta-banner-split .cta-banner-content {
+    text-align: start;
+}
+
+.cta-banner-split .cta-banner-content h2 {
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
 .cta-banner-split .cta-banner-content p {
+    text-align: start;
     margin: 0 0 2rem;
+    max-width: 100%;
 }
 
 .cta-banner-split .cta-banner-img-wrap {
@@ -4051,6 +4068,20 @@ input[type="tel"] {
 
 .cta-banner-split:hover .cta-banner-img-wrap img {
     transform: scale(1.03);
+}
+
+[dir="rtl"] .cta-banner-split {
+    text-align: right;
+}
+
+[dir="rtl"] .cta-banner-split .cta-banner-content,
+[dir="rtl"] .cta-banner-split .cta-banner-content h2,
+[dir="rtl"] .cta-banner-split .cta-banner-content p {
+    text-align: right;
+}
+
+[dir="rtl"] .cta-split-section {
+    text-align: right;
 }
 
 /* Document CTA Split Layout (documents.html) */
@@ -4339,36 +4370,40 @@ input[type="tel"] {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-    /* Center align Express Upsell section at 1024px and below */
+    /* Align Express Upsell section at 1024px and below */
     .express-upsell-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: start;
         width: 100%;
+        max-width: 580px;
+        margin: 0 auto;
     }
     .express-upsell-content .section-label {
-        margin: 0 auto 0.875rem auto !important;
-        justify-content: center;
+        margin: 0 0 0.875rem 0 !important;
+        justify-content: flex-start;
+        align-self: flex-start;
     }
     .express-upsell-content h2 {
-        text-align: center;
+        text-align: start;
+        width: 100%;
     }
     .express-upsell-content p {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: center;
-        max-width: 640px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: start;
+        max-width: 100%;
     }
     .express-benefit-list {
         width: 100%;
-        max-width: 580px;
-        margin: 0 auto 2rem auto;
-        text-align: left;
+        max-width: 100%;
+        margin: 0 0 2rem auto;
+        text-align: start;
     }
     .express-btn-wrap {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
     }
     .express-surcharge-card-wrap {
@@ -4376,44 +4411,48 @@ input[type="tel"] {
         max-width: 580px;
         margin: 0 auto;
     }
-    /* Center align Services Detail sections (services.html) at 1024px and below */
+    /* Align Services Detail sections (services.html) at 1024px and below */
     .service-detail-col {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: start;
         width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
     }
     .service-detail-col .section-label {
-        margin: 0 auto 0.875rem auto !important;
-        justify-content: center;
+        margin: 0 0 0.875rem 0 !important;
+        justify-content: flex-start;
+        align-self: flex-start;
     }
     .service-detail-col h2 {
-        text-align: center;
+        text-align: start;
+        width: 100%;
     }
     .service-detail-col p {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: center;
-        max-width: 680px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: start;
+        max-width: 100%;
     }
     .service-detail-col > div[style*="display:grid"],
     .service-detail-col .notice-card {
         width: 100%;
-        max-width: 600px;
-        margin-left: auto !important;
-        margin-right: auto !important;
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
     .service-detail-col h4 {
-        text-align: center;
+        text-align: start;
         width: 100%;
     }
     .service-detail-col .feature-list {
         width: 100%;
-        max-width: 600px;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: left;
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: start;
     }
     .service-visual-col {
         width: 100%;
@@ -5056,6 +5095,11 @@ input[type="tel"] {
 .badge-outline:hover { background: var(--primary-subtle); border-color: var(--primary); color: var(--primary); }
 
 /* ========== SCROLL TO TOP BUTTON ========== */
+.auth-page .scroll-to-top-btn,
+.fullscreen-page .scroll-to-top-btn {
+    display: none !important;
+}
+
 .scroll-to-top-btn {
     position: fixed;
     bottom: 2rem;
