@@ -51,10 +51,10 @@
     --red: #EF4444;
 
     /* --- Unified Hero Height System (Inner Pages) --- */
-    --hero-inner-height: 320px;
-    --hero-inner-height-tablet: 270px;
-    --hero-inner-height-mobile: 240px;
-    --hero-inner-height-xs: 210px;
+    --hero-inner-height: 390px;
+    --hero-inner-height-tablet: 330px;
+    --hero-inner-height-mobile: 290px;
+    --hero-inner-height-xs: 260px;
 }
 
 /* --- Dark Mode --- */
@@ -2215,7 +2215,7 @@ input[type="tel"] {
 .service-card-visual .service-card-img-wrap {
     position: relative;
     width: 100%;
-    height: 220px;
+    height: 380px;
     overflow: hidden;
     background: var(--bg-surface);
 }
@@ -4760,9 +4760,9 @@ input[type="tel"] {
     .section { padding: 4rem 0; }
     .hero { min-height: 75vh; }
     .page-header {
-        height: var(--hero-inner-height-tablet, 270px);
-        min-height: var(--hero-inner-height-tablet, 270px);
-        padding: 2rem 1.25rem 2.5rem;
+        height: auto;
+        min-height: var(--hero-inner-height-tablet, 330px);
+        padding: 2.25rem 1.25rem 3rem;
     }
 }
 
@@ -5127,12 +5127,12 @@ input[type="tel"] {
     .cta-banner { border-radius: var(--radius-2xl); }
     .timeline { padding-left: 2rem; }
     .page-header {
-        height: var(--hero-inner-height-mobile, 240px);
-        min-height: var(--hero-inner-height-mobile, 240px);
-        padding: 1.5rem 1rem 2rem;
+        height: auto;
+        min-height: var(--hero-inner-height-mobile, 310px);
+        padding: 2rem 1rem 3.5rem;
     }
     .page-header .container {
-        transform: translateY(-0.25rem);
+        transform: none;
     }
 }
 
@@ -5244,8 +5244,8 @@ input[type="tel"] {
 @media (max-width: 480px) {
     .page-header {
         height: auto;
-        min-height: var(--hero-inner-height-xs, 210px);
-        padding: 1.25rem 1rem 1.75rem;
+        min-height: var(--hero-inner-height-xs, 290px);
+        padding: 1.75rem 0.875rem 3.75rem;
     }
 }
 
