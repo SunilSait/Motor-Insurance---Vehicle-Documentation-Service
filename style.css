@@ -51,10 +51,10 @@
     --red: #EF4444;
 
     /* --- Unified Hero Height System (Inner Pages) --- */
-    --hero-inner-height: 560px;
-    --hero-inner-height-tablet: 480px;
-    --hero-inner-height-mobile: 400px;
-    --hero-inner-height-xs: 340px;
+    --hero-inner-height: 320px;
+    --hero-inner-height-tablet: 270px;
+    --hero-inner-height-mobile: 240px;
+    --hero-inner-height-xs: 210px;
 }
 
 /* --- Dark Mode --- */
@@ -212,6 +212,23 @@ p {
 @media (max-width: 768px) {
     .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
     .grid-3 > *:last-child:nth-child(odd) { max-width: 100%; }
+    .tab-panel .grid {
+        justify-items: center;
+    }
+    .doc-card {
+        max-width: 560px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-self: center;
+    }
+    .time-card {
+        max-width: 520px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-self: center;
+    }
 }
 
 /* --- Flex --- */
@@ -1377,12 +1394,12 @@ input[type="tel"] {
 /* ========== PAGE HEADER (HERO — INNER PAGES) ========== */
 .page-header {
     position: relative;
-    height: var(--hero-inner-height, 560px);
-    min-height: var(--hero-inner-height, 560px);
+    height: var(--hero-inner-height, 320px);
+    min-height: var(--hero-inner-height, 320px);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4.5rem 1.25rem 5.5rem;
+    padding: 2.25rem 1.25rem 2.75rem;
     background: var(--secondary);
     overflow: hidden;
     box-sizing: border-box;
@@ -2307,9 +2324,10 @@ input[type="tel"] {
 /* ========== DOCUMENT CHECKLIST ========== */
 .doc-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-light);
+    border: 2px solid var(--border-default);
     border-radius: var(--radius-2xl);
     padding: 1.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     transition: var(--transition-premium);
     display: flex;
     flex-direction: column;
@@ -2530,17 +2548,18 @@ input[type="tel"] {
 /* ========== PROCESSING TIME CARDS ========== */
 .time-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-light);
+    border: 2px solid var(--border-default);
     border-radius: var(--radius-2xl);
-    padding: 1.75rem;
+    padding: 2rem 1.75rem;
     text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     transition: var(--transition-premium);
 }
 
 .time-card:hover {
     box-shadow: var(--shadow-card-hover);
     transform: translateY(-4px);
-    border-color: rgba(217, 119, 6, 0.15);
+    border-color: var(--primary);
 }
 
 .time-value {
@@ -2854,6 +2873,53 @@ input[type="tel"] {
     color: var(--text-muted);
     line-height: 1.45;
     margin: 0;
+}
+
+/* --- Trust Guarantee Card Icons --- */
+.trust-card-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: var(--radius-xl);
+    background: var(--primary-subtle);
+    border: 1px solid rgba(217, 119, 6, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.35rem;
+    flex-shrink: 0;
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover .trust-card-icon,
+.trust-card:hover .trust-card-icon {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* --- Payment Method Card Icons --- */
+.payment-card-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--radius-xl);
+    background: var(--primary-subtle);
+    border: 1px solid rgba(217, 119, 6, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover .payment-card-icon {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+    transform: scale(1.05);
 }
 
 /* --- Bento Vehicle Showcase Cells (Two-Wheeler & Four-Wheeler) --- */
@@ -3605,11 +3671,10 @@ input[type="tel"] {
 
 @media (max-width: 768px) {
     .hero-split-text {
-        padding: 0 1.25rem 2rem;
+        padding: 1.5rem 1.25rem 2rem;
     }
     .hero-split-visual {
         min-height: auto;
-        order: -1;
     }
     .hero-split-visual::before { display: none; }
 }
@@ -4061,7 +4126,7 @@ input[type="tel"] {
     width: 100%;
     height: 280px;
     object-fit: cover;
-    object-position: top center;
+    object-position: center 20%;
     display: block;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -4104,16 +4169,16 @@ input[type="tel"] {
     border: 1px solid var(--border-light);
     height: 100%;
     min-height: 290px;
-    max-height: 320px;
+    max-height: 350px;
 }
 
 .cta-split-section .cta-img-wrap img {
     width: 100%;
     height: 100%;
     min-height: 290px;
-    max-height: 320px;
+    max-height: 350px;
     object-fit: cover;
-    object-position: top center;
+    object-position: center 25%;
     display: block;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -4131,11 +4196,27 @@ input[type="tel"] {
         padding: 2.5rem 1.75rem;
         gap: 2.25rem;
     }
-    .cta-split-section .cta-img-wrap,
+    .cta-split-section .cta-img-wrap {
+        min-height: unset;
+        max-height: unset;
+        height: auto;
+        width: 100%;
+    }
     .cta-split-section .cta-img-wrap img {
         min-height: unset;
         max-height: unset;
-        height: 250px;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        max-height: 400px;
+        object-fit: cover;
+        object-position: center 25%;
+    }
+    .cta-banner-split .cta-banner-img-wrap img {
+        height: auto;
+        aspect-ratio: 16 / 10;
+        max-height: 340px;
+        object-position: center 20%;
     }
 }
 
@@ -4148,14 +4229,24 @@ input[type="tel"] {
         border-radius: var(--radius-2xl);
         gap: 1.75rem;
     }
-    .cta-split-section .cta-img-wrap,
+    .cta-split-section .cta-img-wrap {
+        min-height: unset;
+        max-height: unset;
+        height: auto;
+        width: 100%;
+    }
     .cta-split-section .cta-img-wrap img {
         min-height: unset;
         max-height: unset;
-        height: 220px;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-position: center 25%;
     }
     .cta-banner-split .cta-banner-img-wrap img {
-        height: 220px;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-position: center 20%;
     }
     .cta-suite-form-card {
         padding: 1.5rem 1.15rem;
@@ -4179,14 +4270,24 @@ input[type="tel"] {
         border-radius: var(--radius-xl);
         gap: 1.5rem;
     }
-    .cta-split-section .cta-img-wrap,
+    .cta-split-section .cta-img-wrap {
+        min-height: unset;
+        max-height: unset;
+        height: auto;
+        width: 100%;
+    }
     .cta-split-section .cta-img-wrap img {
         min-height: unset;
         max-height: unset;
-        height: 190px;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-position: center 25%;
     }
     .cta-banner-split .cta-banner-img-wrap img {
-        height: 190px;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-position: center 20%;
     }
     .cta-suite-form-card {
         padding: 1.25rem 0.875rem;
@@ -4362,9 +4463,83 @@ input[type="tel"] {
         max-width: 580px;
         margin: 0 auto;
     }
+    /* Center Why VehicleSure content block at 1024px and below */
+    .why-us-content,
+    .split-layout-2col:has(.why-us-visual) > div:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+    .why-us-content .section-label,
+    .split-layout-2col:has(.why-us-visual) > div:last-child .section-label {
+        margin: 0 auto 0.875rem auto !important;
+        justify-content: center;
+    }
+    .why-us-content h2,
+    .split-layout-2col:has(.why-us-visual) > div:last-child h2 {
+        text-align: center;
+        width: 100%;
+    }
+    .why-us-content p,
+    .split-layout-2col:has(.why-us-visual) > div:last-child > p {
+        text-align: center;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 100%;
+    }
+    .why-us-content .feature-list,
+    .split-layout-2col:has(.why-us-visual) > div:last-child .feature-list {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        text-align: start;
+    }
     .faq-split-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+    }
+    /* Center FAQ Header & Accordion at 1024px and below */
+    .faq-split-grid > div:first-child,
+    .faq-intro-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+    .faq-split-grid > div:first-child .section-label,
+    .faq-intro-col .section-label {
+        margin: 0 auto 0.875rem auto !important;
+        justify-content: center;
+    }
+    .faq-split-grid > div:first-child h2,
+    .faq-intro-col h2 {
+        text-align: center;
+        width: 100%;
+    }
+    .faq-split-grid > div:first-child p,
+    .faq-intro-col p {
+        text-align: center;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 520px;
+    }
+    .faq-split-grid > div:first-child .btn,
+    .faq-intro-col .btn {
+        margin: 0 auto;
+        align-self: center;
+    }
+    .faq-split-grid > div:last-child,
+    .faq-accordion-col {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
     }
     .contact-split-grid {
         grid-template-columns: 1fr;
@@ -4585,8 +4760,9 @@ input[type="tel"] {
     .section { padding: 4rem 0; }
     .hero { min-height: 75vh; }
     .page-header {
-        height: var(--hero-inner-height-tablet, 290px);
-        min-height: var(--hero-inner-height-tablet, 290px);
+        height: var(--hero-inner-height-tablet, 270px);
+        min-height: var(--hero-inner-height-tablet, 270px);
+        padding: 2rem 1.25rem 2.5rem;
     }
 }
 
@@ -4939,7 +5115,6 @@ input[type="tel"] {
     }
     .hero-split-visual {
         min-height: 360px;
-        order: -1;
         width: 100%;
         max-width: 640px;
         margin: 0 auto;
@@ -4952,12 +5127,12 @@ input[type="tel"] {
     .cta-banner { border-radius: var(--radius-2xl); }
     .timeline { padding-left: 2rem; }
     .page-header {
-        height: var(--hero-inner-height-mobile, 400px);
-        min-height: var(--hero-inner-height-mobile, 400px);
-        padding: 0 1rem;
+        height: var(--hero-inner-height-mobile, 240px);
+        min-height: var(--hero-inner-height-mobile, 240px);
+        padding: 1.5rem 1rem 2rem;
     }
     .page-header .container {
-        transform: translateY(-0.5rem);
+        transform: translateY(-0.25rem);
     }
 }
 
@@ -5069,8 +5244,8 @@ input[type="tel"] {
 @media (max-width: 480px) {
     .page-header {
         height: auto;
-        min-height: var(--hero-inner-height-xs, 340px);
-        padding: 2.5rem 1rem 3rem;
+        min-height: var(--hero-inner-height-xs, 210px);
+        padding: 1.25rem 1rem 1.75rem;
     }
 }
 
@@ -5156,5 +5331,246 @@ input[type="tel"] {
     [dir="rtl"] .scroll-to-top-btn {
         right: auto;
         left: 1.5rem;
+    }
+}
+
+/* ========== VERTICAL SERVICE IMAGES & CTA GROUPS ========== */
+.service-img-vertical {
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    aspect-ratio: 3 / 4;
+    max-height: 520px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+    background: linear-gradient(135deg, var(--primary-subtle), var(--bg-surface));
+}
+
+.service-img-vertical img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-premium);
+}
+
+.service-visual-col:hover .service-img-vertical img {
+    transform: scale(1.03);
+}
+
+.service-cta-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .service-img-vertical {
+        max-height: 420px;
+        max-width: 100%;
+    }
+}
+
+/* ========== CENTERED FAQ & CATEGORY PILLS (home2.html) ========== */
+.faq-filter-pills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.faq-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-full);
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    color: var(--text-body);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.faq-pill:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-subtle);
+}
+
+.faq-pill.active {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
+}
+
+.faq-centered-container {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.faq-centered-container .faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    border-left: 4px solid transparent;
+}
+
+.faq-centered-container .faq-item:hover {
+    border-color: var(--border-default);
+    border-left-color: rgba(217, 119, 6, 0.5);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-centered-container .faq-item.active {
+    border-color: rgba(217, 119, 6, 0.3);
+    border-left-color: var(--primary);
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.08);
+    background: var(--bg-card);
+}
+
+.faq-question-text {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.faq-cat-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background: var(--primary-subtle);
+    color: var(--primary);
+    border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.faq-toggle-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--bg-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    transition: var(--transition-smooth);
+    flex-shrink: 0;
+    border: 1px solid var(--border-light);
+}
+
+.faq-item.active .faq-toggle-btn {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+    transform: rotate(180deg);
+}
+
+/* FAQ Live Support Banner */
+.faq-support-banner {
+    max-width: 860px;
+    margin: 2.5rem auto 0 auto;
+    background: linear-gradient(135deg, var(--primary-subtle) 0%, var(--bg-card) 100%);
+    border: 1.5px solid rgba(217, 119, 6, 0.25);
+    border-radius: var(--radius-2xl);
+    padding: 1.75rem 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    box-shadow: var(--shadow-card);
+}
+
+.faq-support-content {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.faq-support-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: var(--radius-xl);
+    background: var(--primary);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+}
+
+.faq-support-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--text-heading);
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.faq-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #10B981;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.15rem 0.55rem;
+    border-radius: var(--radius-full);
+}
+
+.faq-live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10B981;
+    animation: pulse-glow 2s infinite;
+}
+
+.faq-support-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .faq-support-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+    .faq-support-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.875rem;
+    }
+    .faq-support-banner .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
