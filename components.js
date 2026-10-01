@@ -33,9 +33,15 @@ function toggleDir() {
     });
 }
 
-/* ─── SVG LOGO ─────────────────────────────────────────── */
-function getLogoSVG(size = 38) {
-    return `<img src="logo.svg" alt="VehicleSure Logo" width="${size}" height="${size}" class="nav-logo-img" style="width:${size}px;height:${size}px;object-fit:contain;display:block;flex-shrink:0;" />`;
+/* ─── BRAND LOGO ─────────────────────────────────────────── */
+function getLogoSVG(size = 38, isFooter = false) {
+    if (isFooter) {
+        return `<img src="assets/vehiclesure_emblem_dark.png" alt="VehicleSure Emblem" class="nav-logo-img logo-footer" style="height:${size}px;width:auto;object-fit:contain;display:block;flex-shrink:0;" />`;
+    }
+    return `
+        <img src="assets/vehiclesure_emblem.png" alt="VehicleSure Emblem" class="nav-logo-img logo-light" style="height:${size}px;width:auto;object-fit:contain;flex-shrink:0;" />
+        <img src="assets/vehiclesure_emblem_dark.png" alt="VehicleSure Emblem" class="nav-logo-img logo-dark" style="height:${size}px;width:auto;object-fit:contain;flex-shrink:0;" />
+    `;
 }
 
 /* ─── NAVBAR ─────────────────────────────────────────── */
@@ -73,7 +79,7 @@ function injectNav() {
                 ${getLogoSVG(38)}
                 <div class="nav-logo-text">
                     <span class="brand-top">VehicleSure</span>
-                    <span class="brand-bottom">Motor Insurance & Docs</span>
+                    <span class="brand-bottom">MOTOR INSURANCE & DOCS</span>
                 </div>
             </a>
 
@@ -93,7 +99,7 @@ function injectNav() {
                     <i class="${isDark ? 'fas fa-sun theme-icon' : 'fas fa-moon theme-icon'}"></i>
                 </button>
                 <!-- CTAs -->
-                <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+                <a href="booking.html" class="btn btn-primary btn-sm" id="nav-cta-btn">Book Appointment</a>
                 <!-- Mobile Hamburger -->
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">
                     <i class="fas fa-bars mobile-menu-icon"></i>
@@ -108,7 +114,7 @@ function injectNav() {
         <div class="mobile-menu" id="mobile-menu">
             ${mobileLinksHTML}
             <div class="mob-actions">
-                <a href="login.html" class="btn btn-primary w-full">Login</a>
+                <a href="booking.html" class="btn btn-primary w-full" id="mobile-cta-btn">Book Appointment</a>
             </div>
             <div class="mob-toggles">
                 <button onclick="toggleDir()" class="nav-icon-btn" title="Toggle Direction">
@@ -163,11 +169,11 @@ function injectFooter() {
             <div class="footer-grid">
                 <!-- Column 1: Brand -->
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-logo" style="margin-bottom:0.5rem;" aria-label="VehicleSure Home">
-                        ${getLogoSVG(38)}
+                    <a href="index.html" class="nav-logo" style="margin-bottom:1rem;" aria-label="VehicleSure Home">
+                        ${getLogoSVG(40, true)}
                         <div class="nav-logo-text">
                             <span class="brand-top" style="color:#fff;">VehicleSure</span>
-                            <span class="brand-bottom">Motor Insurance & Docs</span>
+                            <span class="brand-bottom">MOTOR INSURANCE & DOCS</span>
                         </div>
                     </a>
                     <p>Your trusted partner for motor insurance renewal, RC transfer, fitness certificates, and PUC assistance for two-wheelers and four-wheelers.</p>
@@ -198,8 +204,8 @@ function injectFooter() {
                     <ul class="footer-links">
                         <li><a href="coming-soon.html">Blog & Guides</a></li>
                         <li><a href="coming-soon.html">Careers</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="documents.html">Document Checklist</a></li>
                         <li><a href="404.html">404 Page</a></li>
                         <li><a href="coming-soon.html">Coming Soon</a></li>
                     </ul>

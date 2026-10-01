@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book an appointment online with VehicleSure. Schedule doorstep document collection for motor insurance renewal, RC transfer, fitness certificates, and PUC assistance.">
+    <title>Book Vehicle Service & Appointment | VehicleSure</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="main-nav"></div>
+
+<!-- PAGE HEADER -->
+<section class="page-header hero-page" id="booking-hero" aria-label="Booking Header">
+    <div class="page-header-bg">
+        <img src="assets/images/banner-contact.jpg" alt="VehicleSure Certified Documentation and Appointment Center">
+    </div>
+    <div class="page-header-overlay"></div>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep">/</span>
+            <span>Book Appointment</span>
+        </div>
+        <h1>Book Vehicle Service</h1>
+        <p>Schedule doorstep document pickup or an expert consultation for motor insurance, RC transfer, fitness certificates, and PUC assistance in under two minutes.</p>
+    </div>
+</section>
+
+<!-- MAIN BOOKING SECTION -->
+<section class="booking-section section" aria-labelledby="booking-heading">
+    <div class="container">
+        <!-- Interactive Form (Centered Down-Flow Layout) -->
+        <form id="booking-form" class="booking-form-wrapper" aria-label="Vehicle Service Booking Form">
+            
+            <!-- Centered Header -->
+            <div class="booking-header-center">
+                <span class="section-label"><i class="fas fa-calendar-check"></i> Online Scheduling</span>
+                <h2 id="booking-heading">Service Booking Details</h2>
+                <p>Provide your contact and vehicle details. Our certified executive will confirm your slot within 30 minutes.</p>
+            </div>
+
+            <!-- Step 1: Contact Information Card -->
+            <div class="booking-card">
+                <div class="booking-step-header">
+                    <span class="booking-step-badge">1</span>
+                    <h3 class="booking-step-title">Your Contact Information</h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="booking-fname">First Name <span style="color:var(--red)">*</span></label>
+                        <input class="form-input form-control" type="text" id="booking-fname" name="fname" placeholder="Rahul" required autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="booking-lname">Last Name <span style="color:var(--red)">*</span></label>
+                        <input class="form-input form-control" type="text" id="booking-lname" name="lname" placeholder="Sharma" required autocomplete="family-name">
+                    </div>
+                </div>
+                <div class="form-row" style="margin-bottom:0">
+                    <div class="form-group" style="margin-bottom:0">
+                        <label class="form-label" for="booking-phone">Phone Number (WhatsApp) <span style="color:var(--red)">*</span></label>
+                        <input class="form-input form-control" type="tel" id="booking-phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+                    </div>
+                    <div class="form-group" style="margin-bottom:0">
+                        <label class="form-label" for="booking-email">Email Address <span style="color:var(--red)">*</span></label>
+                        <input class="form-input form-control" type="email" id="booking-email" name="email" placeholder="rahul.sharma@example.com" required autocomplete="email">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Vehicle & Service Details Card -->
+            <div class="booking-card">
+                <div class="booking-step-header">
+                    <span class="booking-step-badge">2</span>
+                    <h3 class="booking-step-title">Vehicle & Service Details</h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="booking-vtype">Vehicle Category <span style="color:var(--red)">*</span></label>
+                        <select class="form-input form-control" id="booking-vtype" name="vtype" required>
+                            <option value="" disabled selected>Choose vehicle type...</option>
+                            <option value="2w">Two-Wheeler (Motorcycle / Scooter)</option>
+                            <option value="4w">Four-Wheeler (Car / Hatchback / Sedan / SUV)</option>
+                            <option value="commercial">Commercial Vehicle (Taxi / Cab / Goods Carrier)</option>
+                            <option value="ev">Electric Vehicle (EV 2W / EV 4W)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="booking-vreg">Registration Number <span style="color:var(--red)">*</span></label>
+                        <input class="form-input form-control" type="text" id="booking-vreg" name="vreg" placeholder="e.g. TN 09 AB 1234" required style="text-transform:uppercase;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="booking-service">Service Needed <span style="color:var(--red)">*</span></label>
+                    <select class="form-input form-control" id="booking-service" name="service" required>
+                        <option value="" disabled selected>Choose a service...</option>
+                        <option value="insurance-comprehensive">Comprehensive Motor Insurance</option>
+                        <option value="insurance-thirdparty">Third-Party Motor Insurance</option>
+                        <option value="rc-transfer">RC Transfer (Ownership Transfer)</option>
+                        <option value="interstate-noc">Inter-State RC Transfer & RTO NOC</option>
+                        <option value="fitness">Vehicle Fitness Certificate (FC)</option>
+                        <option value="puc">PUC Assistance (Pollution Cert)</option>
+                        <option value="duplicate-rc">Duplicate RC Book / Smart Card</option>
+                        <option value="hypothecation">Hypothecation Removal (HP Cancel)</option>
+                        <option value="road-tax">Road Tax Payment & Assessment</option>
+                        <option value="address-change">Address Change in Vehicle RC</option>
+                        <option value="reregistration">Re-Registration (15-Year Renewal)</option>
+                        <option value="other">Other Vehicle Documentation</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom:0">
+                    <label class="form-label" for="booking-urgency">Processing Urgency</label>
+                    <select class="form-input form-control" id="booking-urgency" name="urgency">
+                        <option value="standard" selected>Standard (3–5 Business Days)</option>
+                        <option value="express">Express Fast-Track (48 Hours)</option>
+                        <option value="urgent">Immediate (Same-Day Pickup)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 3: Service Address Card -->
+            <div class="booking-card">
+                <div class="booking-step-header">
+                    <span class="booking-step-badge">3</span>
+                    <h3 class="booking-step-title">Doorstep Pickup & Delivery Address</h3>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="booking-address">Street Address / Landmark <span style="color:var(--red)">*</span></label>
+                    <input class="form-input form-control" type="text" id="booking-address" name="address" placeholder="No. 12, Gandhi Street, 2nd Main Road" required autocomplete="street-address">
+                </div>
+                <div class="form-row" style="margin-bottom:0">
+                    <div class="form-group" style="margin-bottom:0">
+                        <label class="form-label" for="booking-city">City / Area <span style="color:var(--red)">*</span></label>
+                        <input class="form-input form-control" type="text" id="booking-city" name="city" placeholder="Chennai, Anna Nagar" required autocomplete="address-level2">
+                    </div>
+                    <div class="form-group" style="margin-bottom:0">
+                        <label class="form-label" for="booking-zip">PIN / Postal Code <span style="color:var(--red)">*</span></label>
+                        <input class="form-input form-control" type="text" id="booking-zip" name="zip" placeholder="600040" required autocomplete="postal-code">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 Card: Schedule & Submit (Down Center) -->
+            <div class="booking-card">
+                <div class="booking-step-header">
+                    <span class="booking-step-badge">4</span>
+                    <h3 class="booking-step-title">Preferred Date & Time</h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="booking-date">Preferred Appointment Date <span style="color:var(--red)">*</span></label>
+                        <input class="form-input form-control" type="date" id="booking-date" name="date" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="booking-time">Preferred Time Window <span style="color:var(--red)">*</span></label>
+                        <select class="form-input form-control" id="booking-time" name="time" required>
+                            <option value="" disabled selected>Choose a time window...</option>
+                            <option value="morning">Morning (9:00 AM – 12:00 PM)</option>
+                            <option value="midday">Midday (12:00 PM – 3:00 PM)</option>
+                            <option value="afternoon">Afternoon / Evening (3:00 PM – 6:30 PM)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom:0">
+                    <label class="form-label" for="booking-notes">Vehicle Notes / Current Policy Expiry</label>
+                    <textarea class="form-input form-control" id="booking-notes" name="notes" placeholder="Specify previous insurer, policy expiry date, chassis/engine notes, or preferred RTO..." rows="3"></textarea>
+                </div>
+
+                <!-- Down Center Submission Button -->
+                <div class="booking-submit-wrapper">
+                    <button type="submit" id="booking-submit-btn" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check" style="margin-right:8px;"></i>
+                        Confirm Booking Request
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- Success Confirmation State (Hidden initially) -->
+        <div id="booking-success-box" class="booking-card booking-success-box" style="max-width:680px;margin:0 auto;" aria-live="polite">
+            <div class="booking-success-icon">
+                <i class="fas fa-check" style="font-size:2rem;"></i>
+            </div>
+            <h2 style="font-size:1.75rem;margin-bottom:0.5rem">Booking Request Received!</h2>
+            <p style="color:var(--text-muted);font-size:1rem;margin-bottom:1.5rem">
+                Thank you, <strong id="success-customer-name" style="color:var(--text-heading)">Valued Customer</strong>! Your vehicle documentation appointment has been scheduled with VehicleSure.
+            </p>
+
+            <div class="booking-summary-pill">
+                <div class="booking-summary-pill-row">
+                    <span class="label">Reference ID:</span>
+                    <span class="val" id="success-ref-num">#VS-8492</span>
+                </div>
+                <div class="booking-summary-pill-row">
+                    <span class="label">Service:</span>
+                    <span class="val" id="success-service-name">Comprehensive Motor Insurance</span>
+                </div>
+                <div class="booking-summary-pill-row">
+                    <span class="label">Vehicle Reg:</span>
+                    <span class="val" id="success-vreg" style="text-transform:uppercase;">TN 09 AB 1234</span>
+                </div>
+                <div class="booking-summary-pill-row">
+                    <span class="label">Date & Window:</span>
+                    <span class="val" id="success-datetime">Tomorrow (Morning)</span>
+                </div>
+                <div class="booking-summary-pill-row">
+                    <span class="label">Pickup Location:</span>
+                    <span class="val" id="success-address">123 Main St, Chennai</span>
+                </div>
+                <div class="booking-summary-pill-row">
+                    <span class="label">Status:</span>
+                    <span class="val" style="color:var(--green);"><i class="fas fa-circle-notch fa-spin" style="font-size:0.75rem;margin-right:4px;"></i> Pending Executive Assignment</span>
+                </div>
+            </div>
+
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.75rem">
+                A certified VehicleSure documentation executive will call or WhatsApp your phone within <strong>30 minutes</strong> to verify required papers and confirm document pickup.
+            </p>
+
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+                <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                <button type="button" class="btn btn-primary" id="btn-book-another">
+                    <i class="fas fa-plus-circle" style="margin-right:6px;"></i> Book Another Service
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="main-footer"></div>
+
+<script src="components.js"></script>
+<script>
+    // Booking Page Controller
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('booking-form');
+        const successBox = document.getElementById('booking-success-box');
+        const dateInput = document.getElementById('booking-date');
+        const serviceSelect = document.getElementById('booking-service');
+        const vtypeSelect = document.getElementById('booking-vtype');
+        const btnBookAnother = document.getElementById('btn-book-another');
+
+        // 1. Set minimum selectable date to today
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+            // Default to tomorrow
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            dateInput.value = tomorrow.toISOString().split('T')[0];
+        }
+
+        // 2. Pre-select service from URL parameter (e.g., booking.html?service=insurance or ?service=rc)
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceParam = urlParams.get('service');
+        if (serviceParam && serviceSelect) {
+            const query = serviceParam.toLowerCase();
+            for (let i = 0; i < serviceSelect.options.length; i++) {
+                const optVal = serviceSelect.options[i].value.toLowerCase();
+                const optText = serviceSelect.options[i].text.toLowerCase();
+                if (optVal.includes(query) || optText.includes(query)) {
+                    serviceSelect.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // 3. Pre-select vehicle type if present in URL
+        const vehicleParam = urlParams.get('vehicle') || urlParams.get('vtype');
+        if (vehicleParam && vtypeSelect) {
+            const vQuery = vehicleParam.toLowerCase();
+            for (let i = 0; i < vtypeSelect.options.length; i++) {
+                if (vtypeSelect.options[i].value.toLowerCase().includes(vQuery)) {
+                    vtypeSelect.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // 4. Handle Form Submission with Interactive Loading & Confirmation
+        if (form && successBox) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitBtn = document.getElementById('booking-submit-btn');
+                const origText = submitBtn.innerHTML;
+
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = `
+                    <i class="fas fa-circle-notch fa-spin" style="margin-right:8px;"></i>
+                    Scheduling Appointment...
+                `;
+
+                // Simulate brief network submission
+                setTimeout(() => {
+                    const fname = document.getElementById('booking-fname').value.trim();
+                    const lname = document.getElementById('booking-lname').value.trim();
+                    const vregVal = (document.getElementById('booking-vreg').value.trim() || 'TN 09 AB 1234').toUpperCase();
+                    const selectedServiceText = serviceSelect.options[serviceSelect.selectedIndex]?.text || 'Vehicle Documentation Service';
+                    const dateVal = dateInput.value;
+                    const timeSelect = document.getElementById('booking-time');
+                    const timeText = timeSelect.options[timeSelect.selectedIndex]?.text || '';
+                    const addressVal = document.getElementById('booking-address').value.trim();
+                    const cityVal = document.getElementById('booking-city').value.trim();
+
+                    // Generate reference number
+                    const refNum = '#VS-' + Math.floor(1000 + Math.random() * 9000);
+
+                    // Populate success box
+                    document.getElementById('success-customer-name').textContent = `${fname} ${lname}`.trim() || 'Valued Customer';
+                    document.getElementById('success-ref-num').textContent = refNum;
+                    document.getElementById('success-service-name').textContent = selectedServiceText;
+                    document.getElementById('success-vreg').textContent = vregVal;
+                    document.getElementById('success-datetime').textContent = `${dateVal || 'Selected Date'} (${timeText.split('(')[0].trim() || 'Daytime'})`;
+                    document.getElementById('success-address').textContent = `${addressVal}${cityVal ? ', ' + cityVal : ''}`;
+
+                    // Transition states
+                    form.style.display = 'none';
+                    successBox.style.display = 'block';
+
+                    // Smooth scroll to confirmation box
+                    successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = origText;
+                }, 700);
+            });
+        }
+
+        // 5. "Book Another Service" handler
+        if (btnBookAnother && form && successBox) {
+            btnBookAnother.addEventListener('click', () => {
+                form.reset();
+                successBox.style.display = 'none';
+                form.style.display = 'block';
+                if (dateInput) {
+                    const tomorrow = new Date();
+                    tomorrow.setDate(tomorrow.getDate() + 1);
+                    dateInput.min = new Date().toISOString().split('T')[0];
+                    dateInput.value = tomorrow.toISOString().split('T')[0];
+                }
+                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+    });
+</script>
+</body>
+</html>
